@@ -257,7 +257,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_LSPO ,KC_Z    ,KC_X    ,KC_C    ,KC_D    ,KC_V    ,
    KC_GUSP ,KC_HYPR ,KC_MEH  ,XXXXXXX ,
                                   KC_CBSP ,KC_GUDE ,
-                                  KC_NUES ,KC_PCSR ,
+                                  KC_NUES ,KC_PSCR ,
                                   KC_ADPU ,KC_PGDN ,
         // right hand
                      XXXXXXX ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_ESC  ,
