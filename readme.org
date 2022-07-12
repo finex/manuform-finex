@@ -1,27 +1,79 @@
 #+TITLE: Dactyl Manuform 5x7 FiNeX (Colemak DHm)
-#+AUTHOR: FiNeX (https://www.finex.org)
+#+AUTHOR: Leonardo (FiNeX) Finetti - https://www.leonardofinetti.it
 #+DATE: 03/10/2021
 #+STARTUP: inlineimages
+#+STARTUP: nofold
 
-* Table of contents :TOC_3:
+* Table of contents :TOC:
 - [[#customized-keymap-for-dactyl-manuform-5x7-by-leonardo-finex-finetti][Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti]]
 - [[#features][Features]]
 - [[#layout][Layout]]
 - [[#serial-connection][Serial connection]]
+  - [[#color-legend][Color Legend]]
+- [[#instructions][Instructions]]
+  - [[#right-half][Right half]]
+  - [[#left-half][Left half]]
 - [[#changelog][Changelog]]
 
 * Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti
-TODO: add description
+This keymap use the default one with some changes to suit my needs. Mainly
+having most used symbols on a separated layer copying the common symbols from the
+number keys to the second row, adding other symbols and ~◌̀~ ~◌́~ dead keys for
+accents.
 
 * Features
-TODO: add features
+- Layout: Colemak DHm.
+- Added redundant ~Space~, ~Esc~, ~Ctrl~, ~Del~, ~Backspace~ and ~Enter~ keys. I like to have this keys on both halves.
+- Added macro to print ~->~ and ~=>~ strings.
+- Added macro to print ~:-(~ and ~:-)~ strings.
+- Added more arrows.
+- Added ~(~ and ~)~ on Shifts keys (Space Cadet Shift).
+- Tapdance:
+  - ~;~ × 2 = ~:~
+  - ~[~ × 2 = ~{~
+  - ~]~ × 2 = ~}~
+- No media layer
+- "Print Screen" key.
+- Added ~Alt~, ~Ctrl~, ~Ctrl~ and ~Shift~ on home keys.
+- Added specific layout for "AwesomeWM" window manager.
+- Added clipboard, undo/redo and select all macro on left hand.
 
 * Layout
-TODO: add layout
+This keyboard layout is intended to be used with English (US, intl, with dead keys) settings on PC.
+
+On GNU/Linux systems use the following command to set the keyboard layout:
+#+begin_src sh
+setxkbmap -layout us -variant intl -option eurosign:e
+#+end_src
 
 * Serial connection
 The default serial communication pin on the Dactyl Manuform is D0. I've soldered the wire to the D2 pin. Instead of resoldering again the wire I've simply changed the ~SOFT_SERIAL_PIN~ to ~D2~ on =config.h=.
 
+#+CAPTION: Redox FiNeX layout
+[[https://raw.githubusercontent.com/finex/manuform-finex/main/images/manuform-finex.png]]
+
+** Color Legend
+- Green: Symbols
+- Yellow: Navigation
+- Cyan: Numbers
+- Orange: Functions
+- Red: Tap dance
+
+* Instructions
+To compile and flash the firmware just use the following command from the QMK main directory:
+
+** Right half
+#+begin_src sh
+make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-right
+#+end_src
+
+** Left half
+#+begin_src sh
+make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
+#+end_src
+
 * Changelog
 - 2020/10/03
   First public release.
+- 2022/07/12
+  Major update to the layout with the updates from Redox

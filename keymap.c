@@ -39,7 +39,7 @@ enum tap_dance_codes {
 
 // Shortcuts to make keymap more readable
 // - Adjustment Layer:
-#define KC_ADEN LT(_ADJUST, KC_END)   // End / _ADJUST layer
+#define KC_ADHO LT(_ADJUST, KC_HOME)  // Home / _ADJUST layer
 #define KC_ADPU LT(_ADJUST, KC_PGUP)  // Page Up / _ADJUST layer
 // - Home row modifiers:
 #define KC_GU_A LGUI_T(KC_A)          // A / Left Gui
@@ -54,7 +54,7 @@ enum tap_dance_codes {
 #define KC_LS_T LSFT_T(KC_T)          // T / Left Shift
 // - Other keys/modifiers:
 #define KC_ATAB RALT_T(KC_TAB)        // Tab / Alt Gr
-#define KC_CESC LCTL_T(KC_ESC)        // Esc / Left Ctrl
+#define KC_CESC LCTL_T(KC_ESC)        // Esc / Left Ctrlrs
 #define KC_GUSP RGUI_T(KC_SPC)        // Space / Right Gui
 #define KC_AEQL LALT_T(KC_EQL)        // Equals / Left Alt
 #define KC_CMIN RCTL_T(KC_MINUS)      // Minus / Right Ctrl
@@ -63,7 +63,7 @@ enum tap_dance_codes {
 #define KC_SYSP LT(_SYMB, KC_SPC)     // Space / _symbols
 /* #define KC_AWEN LT(_AWES, KC_ENT)     // Enter / AwesomeWM */
 #define KC_FUTA LT(_FUNC, KC_TAB)     // Tab / _functions
-#define KC_RAEN RALT_T(KC_ENT)        // Enter / Right Alt
+#define KC_CTEN LCTL_T(KC_ENT)        // Enter / Right Alt
 
 #define KC_GUDE RGUI_T(KC_DEL)        // Delete / Right Gui
 #define KC_GUEN RGUI_T(KC_ENT)        // Enter / Right Gui
@@ -225,23 +225,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Colemak Mod-DH
 [_COLEMAKDH] = LAYOUT_5x7(
   // left hand
-   KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,XXXXXXX ,
+   KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_PSCR ,
    KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX ,
    KC_CESC ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
    KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
-   KC_GUSP ,TG_NUM  ,KC_HYBS ,KC_MEEN ,
-                                  KC_CBSP ,KC_GUDE ,
-                                  KC_NAES ,KC_PSCR ,
-                                  KC_ADPU ,KC_PGDN ,
+   KC_GUSP ,XXXXXXX ,KC_HYPR ,KC_MEH  ,
+                                  KC_GUDE ,KC_CBSP ,
+                                  KC_NAES ,KC_ADPU ,
+                                  KC_CTEN ,KC_PGDN ,
         // right hand
-                     XXXXXXX ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_BSPC ,
+                     KB_DEL  ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_BSPC ,
                      XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL ,
                      TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_CMIN ,
                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
                                        KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT,
-        KC_NUEN ,KC_SYSP ,
-        XXXXXXX ,KC_FUTA ,
-        KC_HOME ,KC_ADEN),
+        KC_SYSP ,KC_NUEN ,
+        KC_ADHO ,KC_FUTA ,
+        KC_END  ,KC_BSPC),
 
 // Symbols
 [_SYMB] = LAYOUT_5x7(
@@ -251,9 +251,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______ ,KC_LBRC ,KC_PMNS ,ASC_SQT ,ASC_DQT ,KC_EXLM ,ASC_SAR ,
    _______ ,KC_BSLS ,KC_UNDS ,ASC_CIRC,ASC_TILD,KC_AMPR ,
    _______ ,_______ ,_______ ,_______ ,
-                                  KC_LPRN ,KC_QUOT ,
-                                  KC_GRV  ,_______ ,
-                                  ASC_SAD ,ASC_HAP ,
+                                  KC_LPRN ,KC_GRV  ,
+                                  KC_QUOT ,ASC_SAD ,
+                                  _______ ,ASC_HAP ,
         // right hand
                      _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
                      _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
@@ -295,8 +295,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______ ,KC_RBRC ,KC_4    ,KC_5    ,KC_6    ,KC_PAST ,_______ ,
    _______ ,KC_PSLS ,KC_1    ,KC_2    ,KC_3    ,KC_EQL ,
    _______ ,_______ ,KC_DOT  ,KC_0    ,
+                                  KC_COMM ,KC_ENT  ,
                                   _______ ,_______ ,
-                                  KC_COMM ,_______ ,
                                   _______ ,_______ ,
         // right hand
                      _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,

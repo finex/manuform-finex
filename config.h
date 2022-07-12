@@ -18,17 +18,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-
 #define USE_SERIAL
-
 #define MASTER_LEFT
-// #define MASTER_RIGHT
-//#define EE_HANDS
-// Rows are doubled-up
 
-
-
-
+// Set the serial communication PIN between the tho halves
+#undef SOFT_SERIAL_PIN D2
+#define SOFT_SERIAL_PIN D2
 
 /* Fine tuning */
 // - Reduce errors on fast typing
@@ -60,7 +55,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #define COMBO_COUNT 1
-
-
-// Set the serial communication PIN between the tho halves
-/* #define SOFT_SERIAL_PIN D2 */
