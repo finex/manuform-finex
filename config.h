@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MASTER_LEFT
 
 // Set the serial communication PIN between the tho halves
-#undef SOFT_SERIAL_PIN D2
+#undef SOFT_SERIAL_PIN
 #define SOFT_SERIAL_PIN D2
 
 /* Fine tuning */
