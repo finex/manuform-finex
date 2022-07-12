@@ -1,0 +1,435 @@
+[
+  {
+    "backcolor": "#ffffff",
+    "name": "Dactyl-Manuform 5x7 Evo (Colemak DHm)",
+    "author": "Leonardo (FiNeX) Finetti (https://www.leonardofinetti.it)",
+    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2022-02-13\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
+    "background": {
+      "name": "Bamboo",
+      "style": "background-image: url('/bg/wood/bamboo.jpg');"
+    },
+    "switchMount": "cherry",
+    "switchBrand": "cherry",
+    "switchType": "MX3A-L1Nx",
+    "css": "* {\n    font-family: 'Iosevka SS04', sans-serif;\n} \n.keylabel{\n    font-size: 10px;\n}\n.keylabel {\n    color: white!important;\n}\n.keylabel0, \n.keylabel6{\n    font-weight: bold;\n}\n.keylabel1{\n    color: lime!important;\n}\n.keylabel3{\n    color: orange!important;\n    font-size: 8px;\n}\n.keylabel4{\n    color: red!important;\n    font-size: 8px;\n}\n.keylabel5{\n    color: cyan!important;\n    font-size: 8px;\n}\n.keylabel7{\n    color: yellow!important;\n}\n.keylabel9{\n    margin-top:0.5px;\n    margin-left:-3px;\n\n}\n.keylabel9 {\n    font-size:6.5px!important;\n    color: #acacac!important;\n    font-weight: bold;\n    text-transform: uppercase;\n}\n.keylabel11{\n    margin-top:0.5px;\n    right:-1px;\n}\n.keylabel11{\n    font-size:6.5px!important;\n    color:#777!important;\n}\n"
+  },
+  [
+    {
+      "x": 3.5,
+      "c": "#4f4f4f"
+    },
+    "#\n3\n\n³",
+    {
+      "x": 10.5
+    },
+    "*\n8\n\n¾"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5,
+      "a": 0
+    },
+    "@\n2\n\n²\n\nQWERTY",
+    {
+      "x": 1,
+      "a": 4
+    },
+    "$\n4",
+    {
+      "x": 8.5
+    },
+    "&\n7\n\n½",
+    {
+      "x": 1
+    },
+    "(\n9\n\n‘"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5.5
+    },
+    "%\n5\n\n€",
+    "\nPrnt",
+    {
+      "x": 4.5
+    },
+    "\n⌦",
+    "<span class='cd'>&#9676;&#770;</span>\n6\n^\n¼"
+  ],
+  [
+    {
+      "y": -0.875,
+      "c": "#333333",
+      "w": 1.5
+    },
+    "\n⎋",
+    {
+      "c": "#4f4f4f",
+      "a": 0
+    },
+    "!\n1\n¹\n¡\n\nCOLEMAK",
+    {
+      "x": 14.5,
+      "a": 4
+    },
+    ")\n0\n°\n’",
+    {
+      "c": "#333333",
+      "w": 1.5
+    },
+    "\n⌫"
+  ],
+  [
+    {
+      "y": -0.375,
+      "x": 3.5,
+      "c": "#4f4f4f"
+    },
+    "F\nf\n\n\n\n\nF8\n8\n#",
+    {
+      "x": 10.5
+    },
+    "U\nu\n\n\n\n\n\n\n\n\nCopy"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5
+    },
+    "W\nw\n\n\n\n\nF7\n7\n@",
+    {
+      "x": 1
+    },
+    "P\np\n\n\n\n\nF9\n9\n$",
+    {
+      "x": 8.5
+    },
+    "L\nl\nØ\nø\n\n\n\n\n\n\nCut",
+    {
+      "x": 1
+    },
+    "Y\ny\n\n\n\n\n\n\n\n\nPaste"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5.5
+    },
+    "B\nb\n\n\n\n\nCaps<br>Lock\n+\n%",
+    {
+      "a": 7
+    },
+    "",
+    {
+      "x": 4.5
+    },
+    "",
+    {
+      "a": 4
+    },
+    "J\nj\n\n\n\n\n\n\n\n\n↶"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 1.5,
+      "a": 0
+    },
+    "Q\nq\n\n\n\nRESET\nF12\n-\n|",
+    {
+      "x": 14.5,
+      "a": 4
+    },
+    ":\n;\n°\n¶\n\n\n\n\n\n:",
+    {
+      "c": "#333333",
+      "w": 1.5
+    },
+    "+\n=\n÷\n×"
+  ],
+  [
+    {
+      "y": -0.9950000000000001,
+      "w": 1.5
+    },
+    "\n⭾"
+  ],
+  [
+    {
+      "y": -0.3799999999999999,
+      "x": 3.5,
+      "c": "#4f4f4f",
+      "a": 0
+    },
+    "S\ns\n\n\nCtrl\n\nF5\n5\n'",
+    {
+      "x": 10.5
+    },
+    "E\ne\n\n€\nCtrl\n\n\n\n\n\n▼"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5
+    },
+    "R\nr\n\n®\nAlt\n\nF4\n4\n-",
+    {
+      "x": 1,
+      "sm": "cherry",
+      "n": true
+    },
+    "T\nt\n\n\nShift\n\nF6\n6\n\"",
+    {
+      "x": 8.5,
+      "n": true
+    },
+    "N\nn\n\n\nShift\n\n\n\n\n\n◀",
+    {
+      "x": 1
+    },
+    "I\ni\n\n\nAlt\n\n\n\n\n\n▲"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5.5,
+      "a": 4
+    },
+    "G\ng\n\n\n\n\nNum<br/>Lock\n*\n&",
+    "{\n[\n“\n«\n\n\n=>\n\n->\n{",
+    {
+      "x": 4.5
+    },
+    "}\n]",
+    "M\nm\n\nµ"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 1.5,
+      "a": 0
+    },
+    "A\na\n\n\nGui\n\nF11\n]\n[",
+    {
+      "x": 14.5
+    },
+    "O\no\n\n\nGui\n\n\n\n\n\n▶",
+    {
+      "c": "#333333",
+      "w": 1.5
+    },
+    "_\n-\n\n\nCtrl"
+  ],
+  [
+    {
+      "y": -0.9950000000000001,
+      "w": 1.5
+    },
+    "\n⎋\n\n\nCtrl"
+  ],
+  [
+    {
+      "y": -0.3799999999999999,
+      "x": 3.5,
+      "c": "#4f4f4f",
+      "a": 4
+    },
+    "C\nc\n\n©\n\n\nF2\n2\n^",
+    {
+      "x": 10.5
+    },
+    "<\n,\n\n\n\n\n\n\n\n\n↓"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5,
+      "a": 0
+    },
+    "X\nx\n\n\nAltGr\n\nF1\n1\n_",
+    {
+      "x": 1,
+      "a": 4
+    },
+    "D\nd\n\n\n\n\nF3\n3\n~",
+    {
+      "x": 8.5
+    },
+    "th\nh\n\n\n\n\n\n\n\n\n⇤",
+    {
+      "x": 1,
+      "a": 0
+    },
+    ">\n.\n\n\nAltGr\n\n\n\n\n\n↑"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 5.5,
+      "a": 4
+    },
+    "V\nv\n\n\n\n\nIns\n=\n!",
+    {
+      "x": 6.5
+    },
+    "K\nk"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 17
+    },
+    "?\n/\n\n¿\n\n\n\n\n\n\n⇥",
+    {
+      "c": "#333333",
+      "a": 0,
+      "w": 1.5
+    },
+    "\n)\n\n\nShift"
+  ],
+  [
+    {
+      "y": -0.9950000000000001,
+      "w": 1.5
+    },
+    "\n(\n\n\nShift",
+    {
+      "c": "#4f4f4f",
+      "a": 4
+    },
+    "Z\nz\n\n\n\n\nF10\n/\n\\"
+  ],
+  [
+    {
+      "y": -0.3799999999999999,
+      "x": 3.5,
+      "c": "#333333",
+      "a": 0
+    },
+    "\n⏎\n\n\nMEH\n\n\n0",
+    {
+      "x": 10.5,
+      "a": 4
+    },
+    "\n◀"
+  ],
+  [
+    {
+      "y": -0.875,
+      "x": 2.5,
+      "a": 0
+    },
+    "\n⌫\n\n\nHyper\n\n\n.",
+    {
+      "x": 12.5,
+      "a": 4
+    },
+    "\n▼"
+  ],
+  [
+    {
+      "y": -0.7450000000000001,
+      "x": 0.5,
+      "a": 0
+    },
+    "\n␣\n\n\nGui",
+    {
+      "a": 4,
+      "f": 1
+    },
+    "\n⎇ NUM",
+    {
+      "x": 14.5,
+      "f": 3
+    },
+    "\n▲",
+    "\n▶"
+  ],
+  [
+    {
+      "r": 25,
+      "rx": 6.5,
+      "ry": 4.25,
+      "y": 0.5,
+      "x": -1,
+      "a": 0,
+      "h": 1.5
+    },
+    "\n⌫\n\n\nCtrl\n\n\n\n(",
+    {
+      "x": 0.25,
+      "h": 1.5
+    },
+    "\n⌦\n\n\nGui\n\n\n⏎\n<span>&#9676;&#769;</span>"
+  ],
+  [
+    {
+      "r": 50,
+      "y": -0.5,
+      "x": 2,
+      "t": "yellow!important"
+    },
+    "\n⎋\n\n\n⌥ Nav\n\n\n,\n<span>&#9676;&#768;</span>",
+    {
+      "t": "#000000",
+      "a": 4
+    },
+    "\n↑\n\n\n\n\n\n\n:-("
+  ],
+  [
+    {
+      "x": 2,
+      "a": 7
+    },
+    "",
+    {
+      "a": 4
+    },
+    "\n↓\n\n\n\n\n\n\n:-)"
+  ],
+  [
+    {
+      "r": -50,
+      "rx": 13,
+      "y": 1,
+      "x": -4
+    },
+    "\n⇤",
+    {
+      "t": "orange!important",
+      "a": 0
+    },
+    "\n⭾\n\n\n⌥ Fun"
+  ],
+  [
+    {
+      "x": -4,
+      "t": "#000000",
+      "a": 4
+    },
+    "\n⇥",
+    {
+      "a": 7
+    },
+    ""
+  ],
+  [
+    {
+      "r": -25,
+      "y": -2.5,
+      "x": -1.25,
+      "t": "cyan!important",
+      "a": 0,
+      "h": 1.5
+    },
+    "\n⏎\n\n\n⌥ Num",
+    {
+      "x": 0.25,
+      "t": "lime!important",
+      "h": 1.5
+    },
+    "\n␣\n\n\n⌥ Sym"
+  ]
+]

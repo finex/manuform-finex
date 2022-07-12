@@ -7,6 +7,7 @@
 - [[#customized-keymap-for-dactyl-manuform-5x7-by-leonardo-finex-finetti][Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti]]
 - [[#features][Features]]
 - [[#layout][Layout]]
+- [[#serial-connection][Serial connection]]
 - [[#changelog][Changelog]]
 
 * Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti
@@ -17,6 +18,9 @@ TODO: add features
 
 * Layout
 TODO: add layout
+
+* Serial connection
+The default serial communication pin on the Dactyl Manuform is D0. I've soldered the wire to the D2 pin. Instead of resoldering again the wire I've simply changed the ~SOFT_SERIAL_PIN~ to ~D2~ on =config.h=.
 
 * Changelog
 - 2020/10/03

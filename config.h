@@ -27,11 +27,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // Rows are doubled-up
 
 
+
+
+
 /* Fine tuning */
-// Reduce errors on fast typing
+// - Reduce errors on fast typing
 #define IGNORE_MOD_TAP_INTERRUPT
-// Recommended for heavy chording
+// - Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+// #define TAPPING_FORCE_HOLD
+// - enable TAPPING_FORCE_HOLD only on single keys (home row mods) in order to allow auto-repeat on all other keys (like backspace or space).
+#define TAPPING_FORCE_HOLD_PER_KEY
+// - Recommended for heavy chording
 #define QMK_KEYS_PER_SCAN 4
-// Custom tapping term
+// - Custom tapping term
 #define TAPPING_TERM 200
 #define TAPPING_TERM_PER_KEY
+
+
+/* // - Mouse tuning */
+/* #undef MOUSEKEY_DELAY */
+/* #define MOUSEKEY_DELAY          0 */
+/* #undef MOUSEKEY_SCROLL_DELAY */
+/* #define MOUSEKEY_SCROLL_DELAY   100 */
+/* #undef MOUSEKEY_INTERVAL */
+/* #define MOUSEKEY_INTERVAL       16 */
+/* #undef MOUSEKEY_WHEEL_DELAY */
+/* #define MOUSEKEY_WHEEL_DELAY    0 */
+/* #undef MOUSEKEY_MAX_SPEED */
+/* #define MOUSEKEY_MAX_SPEED      6 */
+/* #undef MOUSEKEY_TIME_TO_MAX */
+/* #define MOUSEKEY_TIME_TO_MAX    64 */
+
+
+#define COMBO_COUNT 1
+
+
+// Set the serial communication PIN between the tho halves
+/* #define SOFT_SERIAL_PIN D2 */
