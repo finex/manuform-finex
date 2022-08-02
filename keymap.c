@@ -59,19 +59,23 @@ enum tap_dance_codes {
 #define KC_AEQL LALT_T(KC_EQL)        // Equals / Left Alt
 #define KC_CMIN RCTL_T(KC_MINUS)      // Minus / Right Ctrl
 #define KC_NUES LT(_NUMB, KC_ESC)     // Esc / _numbers
-#define KC_CBSP LCTL_T(KC_BSPC)        // Backspace / Left Ctrl
+#define KC_CTDE LCTL_T(KC_DEL)        // Del / Left Ctrl
 #define KC_SYSP LT(_SYMB, KC_SPC)     // Space / _symbols
 /* #define KC_AWEN LT(_AWES, KC_ENT)     // Enter / AwesomeWM */
 #define KC_FUTA LT(_FUNC, KC_TAB)     // Tab / _functions
 #define KC_CTEN LCTL_T(KC_ENT)        // Enter / Right Alt
 
-#define KC_GUDE RGUI_T(KC_DEL)        // Delete / Right Gui
+#define KC_GUES RGUI_T(KC_ESC)        // Backspace / Right Gui
+#define KC_AEQL LALT_T(KC_EQL)        // Equals / Left Alt
+#define KC_GUBS RGUI_T(KC_BSPC)       // Backspace / Right Gui
 #define KC_GUEN RGUI_T(KC_ENT)        // Enter / Right Gui
 #define KC_GUCO RGUI_T(KC_COMM)       // Comma / Right Gui
 #define KC_SYBS LT(_SYMB, KC_BSPC)    // Backspace / _symbols
-#define KC_FUDE LT(_FUNC, KC_DEL)     // Delete / _functions
+#define KC_FUEN LT(_FUNC, KC_ENT)     // Enter / _functions
 #define KC_NUEN LT(_NUMB, KC_ENT)     // Enter / _numbers
+#define KC_NUTA LT(_NUMB, KC_TAB)     // Tab / _numbers
 #define KC_NAES LT(_NAVI, KC_ESC)     // Esc / _navi
+#define KC_NABS LT(_NAVI, KC_BSPC)    // Backspace / _navi
 
 #define KC_HYBS HYPR_T(KC_BSPC)        // Backspace / Hyper
 #define KC_MEEN MEH_T(KC_ENT)          // Enter / Meh
@@ -196,7 +200,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     return TAPPING_TERM - 50;
 
   // Left thumb for delete/gui/mouse combo
-  case KC_GUDE:
+  case KC_GUBS:
   case KC_GUEN:
     return TAPPING_TERM - 20;
 
@@ -230,12 +234,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_CESC ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
    KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
    KC_GUSP ,XXXXXXX ,KC_HYPR ,KC_MEH  ,
-                                  KC_GUDE ,KC_CBSP ,
-                                  KC_NAES ,KC_ADPU ,
-                                  KC_CTEN ,KC_PGDN ,
+                                  KC_NAES ,KC_GUBS ,
+                                  KC_CTDE ,KC_ADPU ,
+                                  KC_ENT  ,KC_PGDN ,
         // right hand
-                     KC_DEL  ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_BSPC ,
-                     XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL ,
+                     KC_INS  ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,XXXXXXX ,
+                     XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL  ,
                      TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_CMIN ,
                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
                                        KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT,
