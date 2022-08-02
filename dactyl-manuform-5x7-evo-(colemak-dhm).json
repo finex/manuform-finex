@@ -426,7 +426,7 @@
     {
       "t": "orange!important"
     },
-    "\n⏎\n\n\n⌥ Fun"
+    "\n⭾\n\n\n⌥ Fun"
   ],
   [
     {
@@ -446,7 +446,7 @@
       "a": 0,
       "h": 1.5
     },
-    "\n␣\n\n\n⌥ Sym"
+    "\n⏎\n\n\n⌥ Sym"
   ],
   [
     {
@@ -454,6 +454,6 @@
       "t": "cyan!important",
       "h": 1.5
     },
-    "\n⭾\n\n\n⌥ Num"
+    "\n␣\n\n\n⌥ Num"
   ]
 ]

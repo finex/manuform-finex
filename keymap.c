@@ -71,8 +71,10 @@ enum tap_dance_codes {
 #define KC_GUEN RGUI_T(KC_ENT)        // Enter / Right Gui
 #define KC_GUCO RGUI_T(KC_COMM)       // Comma / Right Gui
 #define KC_SYBS LT(_SYMB, KC_BSPC)    // Backspace / _symbols
+#define KC_SYEN LT(_SYMB, KC_ENT)    // Backspace / _symbols
 #define KC_FUEN LT(_FUNC, KC_ENT)     // Enter / _functions
 #define KC_NUEN LT(_NUMB, KC_ENT)     // Enter / _numbers
+#define KC_NUSP LT(_NUMB, KC_SPC)     // Enter / _numbers
 #define KC_NUTA LT(_NUMB, KC_TAB)     // Tab / _numbers
 #define KC_NAES LT(_NAVI, KC_ESC)     // Esc / _navi
 #define KC_NABS LT(_NAVI, KC_BSPC)    // Backspace / _navi
@@ -243,7 +245,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_CMIN ,
                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
                                        KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT,
-        KC_SYSP ,KC_NUEN ,
+        KC_SYEN ,KC_NUSP ,
         KC_ADHO ,KC_FUTA ,
         KC_END  ,KC_BSPC),
 
