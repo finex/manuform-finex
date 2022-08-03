@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "features/caps_word.h"
 
 // Layer names
 enum{
@@ -7,7 +8,7 @@ enum{
   _NAVI, // Navigation
   _NUMB, // Numbers
   _FUNC, // Functions keys
-  /* _MOUS, // Mouse */
+  _MOUS, // Mouse
   _ADJUST // Adjust
 };
 
@@ -31,7 +32,7 @@ enum custom_keycodes {
 
 // Tap dance codes
 enum tap_dance_codes {
-  /* DANCE_1, // Delete (single), Gui (hold), Mouse layer (double hold) */
+  DANCE_1, // Tab (single), Ctrl (hold), Mouse layer (double hold)
   DANCE_2, // Semicolon (single), Colon (double)
   DANCE_3, // Left Bracket (single), Left Brace (double)
   DANCE_4  // Right Bracket (single), Left Brace (double)
@@ -59,11 +60,13 @@ enum tap_dance_codes {
 #define KC_AEQL LALT_T(KC_EQL)        // Equals / Left Alt
 #define KC_CMIN RCTL_T(KC_MINUS)      // Minus / Right Ctrl
 #define KC_NUES LT(_NUMB, KC_ESC)     // Esc / _numbers
+#define KC_NUDE LT(_NUMB, KC_DEL)     // Del / _numbers
 #define KC_CTDE LCTL_T(KC_DEL)        // Del / Left Ctrl
 #define KC_SYSP LT(_SYMB, KC_SPC)     // Space / _symbols
 /* #define KC_AWEN LT(_AWES, KC_ENT)     // Enter / AwesomeWM */
 #define KC_FUTA LT(_FUNC, KC_TAB)     // Tab / _functions
-#define KC_CTEN LCTL_T(KC_ENT)        // Enter / Right Alt
+#define KC_CTEN LCTL_T(KC_ENT)        // Enter / Left Ctrl
+#define KC_CTTA LCTL_T(KC_TAB)        // Tab / Left Ctrl
 
 #define KC_GUES RGUI_T(KC_ESC)        // Backspace / Right Gui
 #define KC_AEQL LALT_T(KC_EQL)        // Equals / Left Alt
@@ -83,11 +86,11 @@ enum tap_dance_codes {
 #define KC_MEEN MEH_T(KC_ENT)          // Enter / Meh
 
 // - Toggle layers:
-#define TG_NUM TG(_NUMB)
+/* #define TG_NUM TG(_NUMB) */
 /* #define TG_NAV TG(_NAVI) */
 
 // - Tap dance keys:
-/* #define TD_DGUM TD(DANCE_1) */
+#define TD_TCMO TD(DANCE_1)
 #define TD_SCLN TD(DANCE_2)
 #define TD_LBRC TD(DANCE_3)
 #define TD_RBRC TD(DANCE_4)
@@ -117,8 +120,15 @@ enum tap_dance_codes {
 #endif
 
 
+
+
+
 // Send custom strings or change default base layer
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+  // Process caps_word
+  if (!process_caps_word(keycode, record)) { return false; }
+
   if (record->event.pressed) {
     switch(keycode) {
       case ASC_SAR:
@@ -198,12 +208,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     return TAPPING_TERM - 30;
 
   // Right thumb for "symbols" layer
-  case KC_SYSP:
+  case KC_SYBS:
     return TAPPING_TERM - 50;
 
   // Left thumb for delete/gui/mouse combo
-  case KC_GUBS:
-  case KC_GUEN:
+  case KC_CTTA:
+  case KC_FUEN:
     return TAPPING_TERM - 20;
 
   // All other keys
@@ -232,22 +242,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_COLEMAKDH] = LAYOUT_5x7(
   // left hand
    KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_PSCR ,
-   KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX ,
+   KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,KC_BSPC ,
    KC_CESC ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
    KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
    KC_GUSP ,XXXXXXX ,KC_HYPR ,KC_MEH  ,
-                                  KC_NAES ,KC_GUBS ,
-                                  KC_CTDE ,KC_ADPU ,
+                                  KC_NAES ,KC_GUSP ,
+                                  TD_TCMO ,KC_ADPU ,
                                   KC_ENT  ,KC_PGDN ,
         // right hand
                      KC_INS  ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,XXXXXXX ,
-                     XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL  ,
+                     KC_SPC  ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL  ,
                      TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_CMIN ,
                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
                                        KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT,
-        KC_SYEN ,KC_NUSP ,
-        KC_ADHO ,KC_FUTA ,
-        KC_END  ,KC_BSPC),
+        KC_SYBS ,KC_NUDE ,
+        KC_ADHO ,KC_FUEN ,
+        KC_END  ,KC_SPC),
 
 // Symbols
 [_SYMB] = LAYOUT_5x7(
@@ -291,6 +301,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                        _______ ,_______ ,_______ ,_______,
         _______ ,_______ ,
         _______ ,_______ ,
+        _______ ,_______),
+
+
+// Mouse
+[_MOUS] = LAYOUT_5x7(
+  // left hand
+   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
+   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
+   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
+   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
+   _______ ,_______ ,_______ ,_______ ,
+                                  _______ ,_______ ,
+                                  _______ ,_______ ,
+                                  _______ ,_______ ,
+        // right hand
+                     _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
+                     _______ ,U_UND   ,U_CUT   ,U_CPY   ,U_PST   ,U_RDO   ,_______ ,
+                     _______ ,_______ ,KC_MS_L ,KC_MS_D ,KC_MS_U ,KC_MS_R ,_______ ,
+                              _______ ,KC_WH_L ,KC_WH_D ,KC_WH_U ,KC_WH_R ,_______ ,
+                                       _______ ,_______ ,_______ ,_______,
+        KC_BTN1 ,KC_BTN2 ,
+        _______ ,KC_BTN3 ,
         _______ ,_______),
 
 // Numeric keypad layer
@@ -382,61 +414,61 @@ enum {
     MORE_TAPS
 };
 
-/* static tap dance_state = { */
-/*     .is_press_action = true, */
-/*     .step = 0 */
-/* }; */
+static tap dance_state = {
+    .is_press_action = true,
+    .step = 0
+};
 
 /* void on_dance_1(qk_tap_dance_state_t *state, void *user_data); */
 /* uint8_t dance_1_dance_step(qk_tap_dance_state_t *state); */
 /* void dance_1_finished(qk_tap_dance_state_t *state, void *user_data); */
 /* void dance_1_reset(qk_tap_dance_state_t *state, void *user_data); */
 
-/* // Dance 1: Delete / Gui / _Mouse */
-/* void on_dance_1(qk_tap_dance_state_t *state, void *user_data) { */
-/*   if(state->count == 3) { */
-/*     tap_code16(KC_DEL); */
-/*     tap_code16(KC_DEL); */
-/*     tap_code16(KC_DEL); */
-/*   } */
-/*   if(state->count > 3) { */
-/*     tap_code16(KC_DEL); */
-/*   } */
-/* } */
+// Dance 1: Tab / Ctrl / _Mouse
+void on_dance_1(qk_tap_dance_state_t *state, void *user_data) {
+  if(state->count == 3) {
+    tap_code16(KC_TAB);
+    tap_code16(KC_TAB);
+    tap_code16(KC_TAB);
+  }
+  if(state->count > 3) {
+    tap_code16(KC_TAB);
+  }
+}
 
-/* uint8_t dance_1_dance_step(qk_tap_dance_state_t *state) { */
-/*   if (state->count == 1) { */
-/*     if (state->interrupted || !state->pressed) return SINGLE_TAP; */
-/*     else return SINGLE_HOLD; */
-/*   } else if (state->count == 2) { */
-/*     if (state->interrupted) return DOUBLE_SINGLE_TAP; */
-/*     else if (state->pressed) return DOUBLE_HOLD; */
-/*     else return DOUBLE_TAP; */
-/*   } */
-/*   return MORE_TAPS; */
-/* } */
-/* void dance_1_finished(qk_tap_dance_state_t *state, void *user_data) { */
-/*   dance_state.step = dance_1_dance_step(state); */
-/*   switch (dance_state.step) { */
-/*   case SINGLE_TAP: register_code16(KC_DEL); break; */
-/*   case SINGLE_HOLD: register_mods(MOD_BIT(KC_LGUI)); break; */
-/*   case DOUBLE_TAP: register_code16(KC_DEL); register_code16(KC_DEL); break; */
-/*   case DOUBLE_HOLD: layer_on(_MOUS); break; */
-/*   case DOUBLE_SINGLE_TAP: tap_code16(KC_DEL); register_code16(KC_DEL); */
-/*   } */
-/* } */
+uint8_t dance_1_dance_step(qk_tap_dance_state_t *state) {
+  if (state->count == 1) {
+    if (state->interrupted || !state->pressed) return SINGLE_TAP;
+    else return SINGLE_HOLD;
+  } else if (state->count == 2) {
+    if (state->interrupted) return DOUBLE_SINGLE_TAP;
+    else if (state->pressed) return DOUBLE_HOLD;
+    else return DOUBLE_TAP;
+  }
+  return MORE_TAPS;
+}
+void dance_1_finished(qk_tap_dance_state_t *state, void *user_data) {
+  dance_state.step = dance_1_dance_step(state);
+  switch (dance_state.step) {
+  case SINGLE_TAP: register_code16(KC_TAB); break;
+  case SINGLE_HOLD: register_mods(MOD_BIT(KC_LCTL)); break;
+  case DOUBLE_TAP: register_code16(KC_TAB); register_code16(KC_TAB); break;
+  case DOUBLE_HOLD: layer_on(_MOUS); break;
+  case DOUBLE_SINGLE_TAP: tap_code16(KC_TAB); register_code16(KC_TAB);
+  }
+}
 
-/* void dance_1_reset(qk_tap_dance_state_t *state, void *user_data) { */
-/*   wait_ms(10); */
-/*   switch (dance_state.step) { */
-/*   case SINGLE_TAP: unregister_code16(KC_DEL); break; */
-/*   case SINGLE_HOLD: unregister_mods(MOD_BIT(KC_LGUI)); break; */
-/*   case DOUBLE_TAP: unregister_code16(KC_DEL); break; */
-/*   case DOUBLE_HOLD: layer_off(_MOUS); break; */
-/*   case DOUBLE_SINGLE_TAP: unregister_code16(KC_DEL); break; */
-/*   } */
-/*   dance_state.step = 0; */
-/* } */
+void dance_1_reset(qk_tap_dance_state_t *state, void *user_data) {
+  wait_ms(10);
+  switch (dance_state.step) {
+  case SINGLE_TAP: unregister_code16(KC_TAB); break;
+  case SINGLE_HOLD: unregister_mods(MOD_BIT(KC_LCTL)); break;
+  case DOUBLE_TAP: unregister_code16(KC_TAB); break;
+  case DOUBLE_HOLD: layer_off(_MOUS); break;
+  case DOUBLE_SINGLE_TAP: unregister_code16(KC_TAB); break;
+  }
+  dance_state.step = 0;
+}
 
 // Dance 2: Semicolon to Colon
 void dance_2_finished (qk_tap_dance_state_t *state, void *user_data) {
@@ -494,7 +526,7 @@ void dance_4_reset (qk_tap_dance_state_t *state, void *user_data) {
 
 // Match tap dance actions with the corresponding index
 qk_tap_dance_action_t tap_dance_actions[] = {
-  /* [DANCE_1] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_1, dance_1_finished, dance_1_reset), */
+  [DANCE_1] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_1, dance_1_finished, dance_1_reset),
   [DANCE_2] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_2_finished, dance_2_reset),
   [DANCE_3] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_3_finished, dance_3_reset),
   [DANCE_4] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_4_finished, dance_4_reset)
