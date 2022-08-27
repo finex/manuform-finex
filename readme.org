@@ -34,9 +34,10 @@ accents.
   - ~]~ × 2 = ~}~
 - No media layer
 - "Print Screen" key.
-- Added ~Alt~, ~Ctrl~, ~Ctrl~ and ~Shift~ on home keys.
+- ~Alt~, ~Ctrl~, ~Ctrl~ and ~Shift~ on home keys.
 - Added specific layout for "AwesomeWM" window manager.
-- Added clipboard, undo/redo and select all macro on left hand.
+- Added clipboard, undo/redo and select all macro on both left and right hand.
+- Enable mouse layer on triple thumb tap dance.
 
 * Layout
 This keyboard layout is intended to be used with English (US, intl, with dead keys) settings on PC.
@@ -76,4 +77,6 @@ make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
 - 2020/10/03
   First public release.
 - 2022/07/12
-  Major update to the layout with the updates from Redox
+  Major update to the layout with the updates from Redox.
+- 2022/08/27
+  Reworked thumb keys with a more suitable layout.
