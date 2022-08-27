@@ -11,7 +11,7 @@
     "switchMount": "cherry",
     "switchBrand": "cherry",
     "switchType": "MX3A-L1Nx",
-    "css": "* {\n    font-family: 'Iosevka SS04', sans-serif;\n} \n.keylabel{\n    font-size: 10px;\n}\n.keylabel {\n    color: white!important;\n}\n.keylabel0, \n.keylabel6{\n    font-weight: bold;\n}\n.keylabel1{\n    color: lime!important;\n}\n.keylabel3{\n    color: orange!important;\n    font-size: 8px;\n}\n.keylabel4{\n    color: red!important;\n    font-size: 8px;\n}\n.keylabel5{\n    color: cyan!important;\n    font-size: 8px;\n}\n.keylabel7{\n    color: yellow!important;\n}\n.keylabel9{\n    margin-top:0.5px;\n    margin-left:-3px;\n\n}\n.keylabel9 {\n    font-size:6.5px!important;\n    color: #acacac!important;\n    font-weight: bold;\n    text-transform: uppercase;\n}\n.keylabel11{\n    margin-top:0.5px;\n    right:-1px;\n}\n.keylabel11{\n    font-size:6.5px!important;\n    color:#777!important;\n}\n"
+    "css": "* {\n    font-family: 'Iosevka SS04', sans-serif;\n} \n.keylabel{\n    font-size: 10px;\n}\n.keylabel {\n    color: white!important;\n}\n.keylabel0, \n.keylabel6{\n    font-weight: bold;\n}\n.keylabel1{\n    color: lime!important;\n}\n.keylabel3{\n    color: orange!important;\n    font-size: 8px;\n}\n.keylabel4{\n    color: red!important;\n    font-size: 8px;\n}\n.keylabel5{\n    color: cyan!important;\n    font-size: 8px;\n}\n.keylabel7{\n    color: yellow!important;\n    font-size: 8px;\n}\n.keylabel9{\n    margin-top:0.5px;\n    margin-left:-3px;\n\n}\n.keylabel9 {\n    font-size:6.5px!important;\n    color: #acacac!important;\n    font-weight: bold;\n    text-transform: uppercase;\n}\n.keylabel11{\n    margin-top:0.5px;\n    right:-1px;\n}\n.keylabel11{\n    font-size:6.5px!important;\n    color:#777!important;\n}\n"
   },
   [
     {
@@ -93,7 +93,20 @@
     },
     "F\nf\n\n\n\n\nF8\n8\n#",
     {
-      "x": 10.5
+      "x": 10.5,
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
     },
     "U\nu\n\n\n\n\n\n\n\n\nCopy"
   ],
@@ -168,7 +181,8 @@
     },
     "S\ns\n\n\nCtrl\n\nF5\n5\n'",
     {
-      "x": 10.5
+      "x": 10.5,
+      "f": 3
     },
     "E\ne\n\n€\nCtrl\n\n\n\n\n\n▼"
   ],
@@ -189,13 +203,13 @@
     {
       "y": -0.9950000000000001,
       "x": 14,
-      "t": "#000000\n\n\n\n\n\n\n\n#a61bca",
+      "f": 3,
       "n": true
     },
     "N\nn\n\n\nShift\n\n\n\n\n\n◀",
     {
       "x": 1,
-      "t": "#000000"
+      "f": 3
     },
     "I\ni\n\n\nAlt\n\n\n\n\n\n▲"
   ],
@@ -229,7 +243,8 @@
   [
     {
       "y": -0.9950000000000001,
-      "x": 17
+      "x": 17,
+      "f": 3
     },
     "O\no\n\n\nGui\n\n\n\n\n\n▶",
     {
@@ -245,9 +260,10 @@
       "c": "#4f4f4f",
       "a": 4
     },
-    "C\nc\n\n©\n\n\nF2\n2\n^",
+    "C\nc\n\n©\n\n\nF2\n2\n^\n\nCopy",
     {
-      "x": 10.5
+      "x": 10.5,
+      "f": 3
     },
     "<\n,\n\n\n\n\n\n\n\n\n↓"
   ],
@@ -257,22 +273,24 @@
       "x": 2.5,
       "a": 0
     },
-    "X\nx\n\n\nAltGr\n\nF1\n1\n_",
+    "X\nx\n\n\nAltGr\n\nF1\n1\n_\n\nCut",
     {
       "x": 1,
       "a": 4
     },
-    "D\nd\n\n\n\n\nF3\n3\n~"
+    "D\nd\n\n\n\n\nF3\n3\n~\n\nPaste"
   ],
   [
     {
       "y": -0.9950000000000001,
-      "x": 14
+      "x": 14,
+      "f": 3
     },
     "h\nh\n\n\n\n\n\n\n\n\n⇤",
     {
       "x": 1,
-      "a": 0
+      "a": 0,
+      "f": 3
     },
     ">\n.\n\n\nAltGr\n\n\n\n\n\n↑"
   ],
@@ -282,7 +300,7 @@
       "x": 5.5,
       "a": 4
     },
-    "V\nv\n\n\n\n\nIns\n=\n!",
+    "V\nv\n\n\n\n\nIns\n=\n!\n\n↷",
     {
       "x": 6.5
     },
@@ -300,12 +318,13 @@
       "c": "#4f4f4f",
       "a": 4
     },
-    "Z\nz\n\n\n\n\nF10\n/\n\\"
+    "Z\nz\n\n\n\n\nF10\n/\n\\\n\n↶"
   ],
   [
     {
       "y": -0.9950000000000001,
-      "x": 17
+      "x": 17,
+      "f": 3
     },
     "?\n/\n\n¿\n\n\n\n\n\n\n⇥",
     {
@@ -352,7 +371,6 @@
     },
     "\n␣\n\n\nGUI",
     {
-      "t": "",
       "a": 7,
       "f": 1
     },
@@ -362,7 +380,6 @@
     {
       "y": -0.9950000000000001,
       "x": 17,
-      "t": "#000000",
       "a": 4,
       "f": 3
     },
@@ -379,7 +396,7 @@
       "a": 0,
       "h": 1.5
     },
-    "\n␣\n\n\nGUI\n\n<span>&#9676;&#768;</span>\n⏎"
+    "\n⌫\n\n\nGUI\n\n<span>&#9676;&#768;</span>\n⏎\n)"
   ],
   [
     {
@@ -388,16 +405,15 @@
       "t": "yellow!important",
       "h": 1.5
     },
-    "\n⎋\n\n\n⌥ Nav\n\n<span>&#9676;&#769;</span>\n,"
+    "\n⎋\n\n\n⌥ Nav\n\n<span>&#9676;&#769;</span>\n,\n("
   ],
   [
     {
       "r": 50,
       "y": -0.5,
-      "x": 2,
-      "t": ""
+      "x": 2
     },
-    "\n⭾\n\n\nCTRL\n\n\n\n\n⌥ MOU",
+    "\n⌦\n\n\nCTRL\n\n\n\n\n⌥ MOU",
     {
       "t": "#000000"
     },
@@ -443,7 +459,7 @@
       "a": 0,
       "h": 1.5
     },
-    "\n⌫\n\n\n⌥ Sym\n\n\n\n\n\n&nbsp;<small><em>M1</em></small>"
+    "\n␣\n\n\n⌥ Sym\n\n\n\n\n\n&nbsp;<small><em>M1</em></small>"
   ],
   [
     {
@@ -464,6 +480,6 @@
       ],
       "h": 1.5
     },
-    "\n⌦\n\n\n⌥ Num\n\n\n\n\n\n&nbsp;<small><em>M2</em></small>"
+    "\n⭾\n\n\n⌥ Num\n\n\n\n\n\n&nbsp;<small><em>M2</em></small>"
   ]
 ]

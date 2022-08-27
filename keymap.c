@@ -55,7 +55,8 @@ enum tap_dance_codes {
 #define KC_LS_T LSFT_T(KC_T)          // T / Left Shift
 // - Other keys/modifiers:
 #define KC_ATAB RALT_T(KC_TAB)        // Tab / Alt Gr
-#define KC_CESC LCTL_T(KC_ESC)        // Esc / Left Ctrlrs
+#define KC_CESC LCTL_T(KC_ESC)        // Esc / Left Ctrl
+#define KC_CTBS LCTL_T(KC_BSPC)        // Esc / Left Ctrl
 #define KC_GUSP RGUI_T(KC_SPC)        // Space / Right Gui
 #define KC_AEQL LALT_T(KC_EQL)        // Equals / Left Alt
 #define KC_CMIN RCTL_T(KC_MINUS)      // Minus / Right Ctrl
@@ -71,6 +72,7 @@ enum tap_dance_codes {
 #define KC_GUES RGUI_T(KC_ESC)        // Backspace / Right Gui
 #define KC_AEQL LALT_T(KC_EQL)        // Equals / Left Alt
 #define KC_GUBS RGUI_T(KC_BSPC)       // Backspace / Right Gui
+#define KC_GUDE RGUI_T(KC_DEL)       // Del / Right Gui
 #define KC_GUEN RGUI_T(KC_ENT)        // Enter / Right Gui
 #define KC_GUCO RGUI_T(KC_COMM)       // Comma / Right Gui
 #define KC_SYBS LT(_SYMB, KC_BSPC)    // Backspace / _symbols
@@ -90,7 +92,7 @@ enum tap_dance_codes {
 /* #define TG_NAV TG(_NAVI) */
 
 // - Tap dance keys:
-#define TD_TCMO TD(DANCE_1)
+#define TD_DCMO TD(DANCE_1)
 #define TD_SCLN TD(DANCE_2)
 #define TD_LBRC TD(DANCE_3)
 #define TD_RBRC TD(DANCE_4)
@@ -111,7 +113,7 @@ enum tap_dance_codes {
 /* #define U_UND KC_UNDO */
 // #define U_RDO KC_AGIN // Emacs executes "reperat-complex-command"
 #define U_UND C(KC_UNDS)
-#define U_RDO A(KC_UNDS)
+#define U_RDO A(KC_AGIN)
 /* #define U_ALL C(KC_A) // Emacs need to rebind mark-whole-buffer to: C-a */
 
 
@@ -246,8 +248,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_CESC ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
    KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
    KC_GUSP ,XXXXXXX ,KC_HYPR ,KC_MEH  ,
-                                  KC_NAES ,KC_GUSP ,
-                                  TD_TCMO ,KC_ADPU ,
+                                  KC_NAES ,KC_GUBS ,
+                                  TD_DCMO ,KC_ADPU ,
                                   KC_ENT  ,KC_PGDN ,
         // right hand
                      KC_INS  ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,XXXXXXX ,
@@ -255,20 +257,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_CMIN ,
                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
                                        KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT,
-        KC_SYBS ,KC_NUDE ,
-        KC_ADHO ,KC_FUEN ,
-        KC_END  ,KC_SPC),
+        KC_SYSP ,KC_NUTA ,
+        KC_ADHO ,KC_FUEN,
+        KC_END  ,KC_DEL),
 
 // Symbols
 [_SYMB] = LAYOUT_5x7(
   // left hand
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
    _______ ,KC_PIPE ,KC_AT   ,KC_HASH ,KC_DLR  ,KC_PERC ,_______ ,
-   _______ ,KC_LBRC ,KC_PMNS ,ASC_SQT ,ASC_DQT ,KC_EXLM ,ASC_SAR ,
-   _______ ,KC_BSLS ,KC_UNDS ,ASC_CIRC,ASC_TILD,KC_AMPR ,
+   _______ ,KC_LBRC ,KC_PMNS ,ASC_SQT ,ASC_DQT ,KC_AMPR ,ASC_SAR ,
+   _______ ,KC_BSLS ,KC_UNDS ,ASC_CIRC,ASC_TILD,KC_EXLM ,
    _______ ,_______ ,_______ ,_______ ,
-                                  KC_LPRN ,KC_GRV  ,
-                                  KC_QUOT ,ASC_SAD ,
+                                  KC_LPRN ,KC_RPRN ,
+                                  _______ ,ASC_SAD ,
                                   _______ ,ASC_HAP ,
         // right hand
                      _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
@@ -288,7 +290,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
-   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
+   _______ ,U_UND   ,U_CUT   ,U_CPY   ,U_PST   ,U_RDO   ,
    _______ ,_______ ,_______ ,_______ ,
                                   _______ ,_______ ,
                                   _______ ,_______ ,
@@ -310,7 +312,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
-   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
+   _______ ,U_UND   ,U_CUT   ,U_CPY   ,U_PST   ,U_RDO   ,
    _______ ,_______ ,_______ ,_______ ,
                                   _______ ,_______ ,
                                   _______ ,_______ ,
@@ -354,7 +356,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    _______ ,KC_F11  ,KC_F4   ,KC_F5   ,KC_F6   ,KC_NLCK ,ASC_DAR ,
    _______ ,KC_F10  ,KC_F1   ,KC_F2   ,KC_F3   ,KC_INS ,
    _______ ,_______ ,_______ ,_______ ,
-                                  _______ ,_______ ,
+                                  KC_QUOT ,KC_GRV  ,
                                   _______ ,_______ ,
                                   _______ ,_______ ,
         // right hand
@@ -424,15 +426,15 @@ static tap dance_state = {
 /* void dance_1_finished(qk_tap_dance_state_t *state, void *user_data); */
 /* void dance_1_reset(qk_tap_dance_state_t *state, void *user_data); */
 
-// Dance 1: Tab / Ctrl / _Mouse
+// Dance 1: Del / Ctrl / _Mouse
 void on_dance_1(qk_tap_dance_state_t *state, void *user_data) {
   if(state->count == 3) {
-    tap_code16(KC_TAB);
-    tap_code16(KC_TAB);
-    tap_code16(KC_TAB);
+    tap_code16(KC_DEL);
+    tap_code16(KC_DEL);
+    tap_code16(KC_DEL);
   }
   if(state->count > 3) {
-    tap_code16(KC_TAB);
+    tap_code16(KC_DEL);
   }
 }
 
@@ -450,22 +452,22 @@ uint8_t dance_1_dance_step(qk_tap_dance_state_t *state) {
 void dance_1_finished(qk_tap_dance_state_t *state, void *user_data) {
   dance_state.step = dance_1_dance_step(state);
   switch (dance_state.step) {
-  case SINGLE_TAP: register_code16(KC_TAB); break;
+  case SINGLE_TAP: register_code16(KC_DEL); break;
   case SINGLE_HOLD: register_mods(MOD_BIT(KC_LCTL)); break;
-  case DOUBLE_TAP: register_code16(KC_TAB); register_code16(KC_TAB); break;
+  case DOUBLE_TAP: register_code16(KC_DEL); register_code16(KC_DEL); break;
   case DOUBLE_HOLD: layer_on(_MOUS); break;
-  case DOUBLE_SINGLE_TAP: tap_code16(KC_TAB); register_code16(KC_TAB);
+  case DOUBLE_SINGLE_TAP: tap_code16(KC_DEL); register_code16(KC_DEL);
   }
 }
 
 void dance_1_reset(qk_tap_dance_state_t *state, void *user_data) {
   wait_ms(10);
   switch (dance_state.step) {
-  case SINGLE_TAP: unregister_code16(KC_TAB); break;
+  case SINGLE_TAP: unregister_code16(KC_DEL); break;
   case SINGLE_HOLD: unregister_mods(MOD_BIT(KC_LCTL)); break;
-  case DOUBLE_TAP: unregister_code16(KC_TAB); break;
+  case DOUBLE_TAP: unregister_code16(KC_DEL); break;
   case DOUBLE_HOLD: layer_off(_MOUS); break;
-  case DOUBLE_SINGLE_TAP: unregister_code16(KC_TAB); break;
+  case DOUBLE_SINGLE_TAP: unregister_code16(KC_DEL); break;
   }
   dance_state.step = 0;
 }
