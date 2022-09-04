@@ -97,16 +97,16 @@ enum tap_dance_codes {
 #define TD_LBRC TD(DANCE_3)
 #define TD_RBRC TD(DANCE_4)
 // - Awesome WM macros:
-/* #define KC_AW1 LGUI(KC_1) */
-/* #define KC_AW2 LGUI(KC_2) */
-/* #define KC_AW3 LGUI(KC_3) */
-/* #define KC_AW4 LGUI(KC_4) */
-/* #define KC_AW5 LGUI(KC_5) */
-/* #define KC_AW6 LGUI(KC_6) */
-/* #define KC_AW7 LGUI(KC_7) */
-/* #define KC_AW8 LGUI(KC_8) */
-/* #define KC_AW9 LGUI(KC_9) */
-/* // - Clipboard, Undo/Redo and "select all" */
+#define KC_AW1 LGUI(KC_1)
+#define KC_AW2 LGUI(KC_2)
+#define KC_AW3 LGUI(KC_3)
+#define KC_AW4 LGUI(KC_4)
+#define KC_AW5 LGUI(KC_5)
+#define KC_AW6 LGUI(KC_6)
+#define KC_AW7 LGUI(KC_7)
+#define KC_AW8 LGUI(KC_8)
+#define KC_AW9 LGUI(KC_9)
+// - Clipboard, Undo/Redo and "select all"
 #define U_PST S(KC_INS)
 #define U_CPY C(KC_INS)
 #define U_CUT S(KC_DEL)
@@ -288,9 +288,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAVI] = LAYOUT_5x7(
   // left hand
    _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
-   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
-   _______ ,_______ ,_______ ,_______ ,_______ ,_______ ,_______ ,
-   _______ ,U_UND   ,U_CUT   ,U_CPY   ,U_PST   ,U_RDO   ,
+   _______ ,_______ ,KC_AW7  ,KC_AW8  ,KC_AW9  ,_______ ,_______ ,
+   _______ ,_______ ,KC_AW4  ,KC_AW5  ,KC_AW6  ,_______ ,_______ ,
+   _______ ,_______ ,KC_AW1  ,KC_AW2  ,KC_AW3  ,_______ ,
    _______ ,_______ ,_______ ,_______ ,
                                   _______ ,_______ ,
                                   _______ ,_______ ,
