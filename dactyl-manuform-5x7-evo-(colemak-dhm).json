@@ -91,7 +91,7 @@
       "c": "#4f4f4f",
       "a": 4
     },
-    "F\nf\n\n\n\n\nF8\n8\n#",
+    "F\nf\n\n\n\n\nF8\n8\n#\n\nP⭾",
     {
       "x": 10.5,
       "fa": [
@@ -108,42 +108,51 @@
         1
       ]
     },
-    "U\nu\n\n\n\n\n\n\n\n\nCopy"
+    "U\nu\n\n\n\n\n\n\n*\n\nCopy"
   ],
   [
     {
       "y": -0.875,
-      "x": 2.5
+      "x": 2.5,
+      "f": 3
     },
-    "W\nw\n\n\n\n\nF7\n7\n@",
+    "W\nw\n\n\n\n\nF7\n7\n@\n\n⭾",
     {
-      "x": 1
+      "x": 1,
+      "f": 3
     },
-    "P\np\n\n\n\n\nF9\n9\n$"
+    "P\np\n\n\n\n\nF9\n9\n$\n\nN⭾"
   ],
   [
     {
       "y": -0.9950000000000001,
       "x": 14
     },
-    "L\nl\nØ\nø\n\n\n\n\n\n\nCut",
+    "L\nl\nØ\nø\n\n\n\n\n&\n\nCut",
     {
       "x": 1
     },
-    "Y\ny\n\n\n\n\n\n\n\n\nPaste"
+    "Y\ny\n\n\n\n\n\n\n/*\n\nPaste"
   ],
   [
     {
       "y": -0.8799999999999999,
-      "x": 5.5
+      "x": 5.5,
+      "f": 3
     },
-    "B\nb\n\n\n\n\nCaps<br>Lock\n+\n%",
-    "\n⌫",
+    "B\nb\n\n\n\n\nCaps<br>Lock\n+\n%\n\n␣",
+    {
+      "a": 7
+    },
+    "",
     {
       "x": 4.5
     },
-    "\n␣",
-    "J\nj\n\n\n\n\n\n\n\n\n↶"
+    "",
+    {
+      "a": 4
+    },
+    "J\nj\n\n\n\n\n\n\n^\n\n↶"
   ],
   [
     {
@@ -151,7 +160,7 @@
       "x": 1.5,
       "a": 0
     },
-    "Q\nq\n\n\n\nRESET\nF12\n-\n|"
+    "Q\nq\n\n\n\nRESET\nF12\n-\n!"
   ],
   [
     {
@@ -165,7 +174,7 @@
       "x": 15.5,
       "c": "#4f4f4f"
     },
-    ":\n;\n°\n¶\n\n\n\n\n\n:\n↷",
+    ":\n;\n°\n¶\n\n\n\n\n*/\n:\n↷",
     {
       "c": "#333333",
       "w": 1.5
@@ -184,7 +193,7 @@
       "x": 10.5,
       "f": 3
     },
-    "E\ne\n\n€\nCtrl\n\n\n\n\n\n▼"
+    "E\ne\n\n€\nCtrl\n\n\n\n~\n\n▼"
   ],
   [
     {
@@ -206,39 +215,43 @@
       "f": 3,
       "n": true
     },
-    "N\nn\n\n\nShift\n\n\n\n\n\n◀",
+    "N\nn\n\n\nShift\n\n\n\n:\n\n◀",
     {
       "x": 1,
       "f": 3
     },
-    "I\ni\n\n\nAlt\n\n\n\n\n\n▲"
+    "I\ni\n\n\nAlt\n\n\n\n->\n\n▲"
   ],
   [
     {
       "y": -0.8799999999999999,
       "x": 5.5,
-      "a": 4
+      "a": 4,
+      "f": 3
     },
-    "G\ng\n\n\n\n\nNum<br/>Lock\n*\n&",
-    "{\n[\n“\n«\n\n\n=>\n\n->\n{",
+    "G\ng\n\n\n\n\nPrint\n*\n<span>&#9676;&#769;</span>\n\n⏎",
+    "{\n[\n“\n«\n\n\n\n\n\n{",
     {
       "x": 4.5
     },
-    "}\n]",
-    "M\nm\n\nµ"
+    "}\n]\n”\n»\n\n\n\n\n\n}",
+    {
+      "f": 3
+    },
+    "M\nm\n\nµ\n\n\n\n\n<span>&#9676;&#768;</span>\n\n<small><em>M3</em></small>"
   ],
   [
     {
       "y": -0.875,
       "c": "#333333",
-      "a": 0,
       "w": 1.5
     },
-    "\n⎋\n\n\nCtrl",
+    "\n⎋",
     {
-      "c": "#4f4f4f"
+      "c": "#4f4f4f",
+      "a": 0
     },
-    "A\na\n\n\nGui\n\nF11\n]\n["
+    "A\na\n\n\nGui\n\nF11\n.\n|"
   ],
   [
     {
@@ -246,39 +259,42 @@
       "x": 17,
       "f": 3
     },
-    "O\no\n\n\nGui\n\n\n\n\n\n▶",
+    "O\no\n\n\nGui\n\n\n\n=>\n\n▶",
     {
       "c": "#333333",
+      "a": 4,
       "w": 1.5
     },
-    "_\n-\n\n\nCtrl"
+    "_\n-"
   ],
   [
     {
       "y": -0.3799999999999999,
       "x": 3.5,
       "c": "#4f4f4f",
-      "a": 4
+      "f": 3
     },
-    "C\nc\n\n©\n\n\nF2\n2\n^\n\nCopy",
+    "C\nc\n\n©\n\n\nF2\n2\n{\n\nCopy",
     {
       "x": 10.5,
       "f": 3
     },
-    "<\n,\n\n\n\n\n\n\n\n\n↓"
+    "<\n,\n\n\n\n\n\n\n}\n\n↓"
   ],
   [
     {
       "y": -0.875,
       "x": 2.5,
-      "a": 0
+      "a": 0,
+      "f": 3
     },
     "X\nx\n\n\nAltGr\n\nF1\n1\n_\n\nCut",
     {
       "x": 1,
-      "a": 4
+      "a": 4,
+      "f": 3
     },
-    "D\nd\n\n\n\n\nF3\n3\n~\n\nPaste"
+    "D\nd\n\n\n\n\nF3\n3\n[\n\nPaste"
   ],
   [
     {
@@ -286,25 +302,26 @@
       "x": 14,
       "f": 3
     },
-    "h\nh\n\n\n\n\n\n\n\n\n⇤",
+    "h\nh\n\n\n\n\n\n\n]\n\n⇤",
     {
       "x": 1,
       "a": 0,
       "f": 3
     },
-    ">\n.\n\n\nAltGr\n\n\n\n\n\n↑"
+    ">\n.\n\n\nAltGr\n\n\n\n../\n\n↑"
   ],
   [
     {
       "y": -0.8799999999999999,
       "x": 5.5,
-      "a": 4
+      "a": 4,
+      "f": 3
     },
-    "V\nv\n\n\n\n\nIns\n=\n!\n\n↷",
+    "V\nv\n\n\n\n\nIns\n=\n=\n\n↷",
     {
       "x": 6.5
     },
-    "K\nk"
+    "K\nk\n\n\n\n\n\n\n`"
   ],
   [
     {
@@ -316,7 +333,8 @@
     "\n(\n\n\nShift",
     {
       "c": "#4f4f4f",
-      "a": 4
+      "a": 4,
+      "f": 3
     },
     "Z\nz\n\n\n\n\nF10\n/\n\\\n\n↶"
   ],
@@ -326,7 +344,7 @@
       "x": 17,
       "f": 3
     },
-    "?\n/\n\n¿\n\n\n\n\n\n\n⇥",
+    "?\n/\n\n¿\n\n\n\n\n//\n\n⇥",
     {
       "c": "#333333",
       "a": 0,
@@ -367,11 +385,10 @@
     {
       "y": -0.7549999999999999,
       "x": 0.5,
-      "a": 0
+      "a": 7
     },
-    "\n␣\n\n\nGUI",
+    "",
     {
-      "a": 7,
       "f": 1
     },
     ""
@@ -396,7 +413,7 @@
       "a": 0,
       "h": 1.5
     },
-    "\n⌫\n\n\nGUI\n\n<span>&#9676;&#768;</span>\n⏎\n)"
+    "\n⌫\n\n\n⌥ Nav\n\n\n⏎\n("
   ],
   [
     {
@@ -405,7 +422,7 @@
       "t": "yellow!important",
       "h": 1.5
     },
-    "\n⎋\n\n\n⌥ Nav\n\n<span>&#9676;&#769;</span>\n,\n("
+    "\n⎋\n\n\n⌥ Mou\n\n\n,\n)"
   ],
   [
     {
@@ -413,7 +430,7 @@
       "y": -0.5,
       "x": 2
     },
-    "\n⌦\n\n\nCTRL\n\n\n\n\n⌥ MOU",
+    "\n⌦\n\n\n⌥ WSP\n\n\n\n:-)",
     {
       "t": "#000000"
     },
@@ -425,7 +442,7 @@
       "a": 4
     },
     "\n⏎",
-    "\n↓\n\n\n\n\n\n\n:-)"
+    "\n↓"
   ],
   [
     {
@@ -439,7 +456,7 @@
     {
       "t": "orange!important"
     },
-    "\n⏎\n\n\n⌥ Fun\n\n\n\n\n\n&nbsp;<small><em>M3</em></small>"
+    "\n⏎\n\n\n⌥ Fun"
   ],
   [
     {
@@ -459,7 +476,7 @@
       "a": 0,
       "h": 1.5
     },
-    "\n␣\n\n\n⌥ Sym\n\n\n\n\n\n&nbsp;<small><em>M1</em></small>"
+    "\n␣\n\n\n⌥ Sym\n\n\n\n\n\n<small><em>M1</em></small>"
   ],
   [
     {
@@ -480,6 +497,6 @@
       ],
       "h": 1.5
     },
-    "\n⭾\n\n\n⌥ Num\n\n\n\n\n\n&nbsp;<small><em>M2</em></small>"
+    "\n⭾\n\n\n⌥ Num\n\n\n\n\n\n<small><em>M2</em></small>"
   ]
 ]

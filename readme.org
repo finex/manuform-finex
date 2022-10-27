@@ -1,6 +1,6 @@
 #+TITLE: Dactyl Manuform 5x7 FiNeX (Colemak DHm)
 #+AUTHOR: Leonardo (FiNeX) Finetti - https://www.leonardofinetti.it
-#+DATE: 03/10/2021
+#+DATE: 27/10/2022
 #+STARTUP: inlineimages
 #+STARTUP: nofold
 
@@ -25,7 +25,7 @@ accents.
 - Layout: Colemak DHm.
 - Added redundant ~Space~, ~Esc~, ~Ctrl~, ~Del~, ~Backspace~ and ~Enter~ keys. I like to have this keys on both halves.
 - Added macro to print ~->~ and ~=>~ strings.
-- Added macro to print ~:-(~ and ~:-)~ strings.
+- Added macro to print custom strings.
 - Added more arrows.
 - Added ~(~ and ~)~ on Shifts keys (Space Cadet Shift).
 - Tapdance:
@@ -36,8 +36,8 @@ accents.
 - "Print Screen" key.
 - ~Alt~, ~Ctrl~, ~Ctrl~ and ~Shift~ on home keys.
 - Added specific layout for "AwesomeWM" window manager.
-- Added clipboard, undo/redo and select all macro on both left and right hand.
-- Enable mouse layer on triple thumb tap dance.
+- Added clipboard and undo/redo macro.
+- Mouse layer.
 
 * Layout
 This keyboard layout is intended to be used with English (US, intl, with dead keys) settings on PC.
@@ -80,3 +80,5 @@ make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
   Major update to the layout with the updates from Redox.
 - 2022/08/27
   Reworked thumb keys with a more suitable layout.
+- 2022/10/27
+  Cleanup code, updated image and json, minor fixes
