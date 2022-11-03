@@ -93,6 +93,11 @@ enum tap_dance_codes {
 #define U_RDO LCTL(LSFT(KC_Z)) // Doesn't work on Emacs
 /* #define U_ALL C(KC_A) // Emacs need to rebind mark-whole-buffer to: C-a */
 
+//- Macros
+#define KC_PTAB RCS(KC_TAB)
+#define KC_NTAB C(KC_TAB)
+
+
 #ifdef CONSOLE_ENABLE
 #include "print.h"
 #endif
@@ -206,7 +211,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    // left hand
    KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_PSCR ,
    KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX ,
-   KC_ESC ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
+   KC_ESC  ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
    KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
    XXXXXXX ,XXXXXXX ,KC_HYPR ,KC_MEH  ,
                                   KC_MOES ,KC_NABS ,
@@ -230,16 +235,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
    XXXXXXX ,KC_EXLM ,KC_AT   ,KC_HASH ,KC_DLR  ,KC_PERC ,XXXXXXX ,
    XXXXXXX ,KC_PIPE ,KC_PMNS ,ASC_SQT ,ASC_DQT ,KC_GRV  ,XXXXXXX ,
-   XXXXXXX ,KC_BSLS ,KC_UNDS ,KC_LCBR ,KC_LBRC ,KC_QUOT ,
+   XXXXXXX ,KC_BSLS ,KC_UNDS ,KC_LCBR ,KC_LBRC ,KC_EQL  ,
    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
                                   KC_RPRN ,KC_LPRN ,
                                   ASC_HAP ,ASC_SAD ,
                                   XXXXXXX ,XXXXXXX ,
   // right hand
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
-                     XXXXXXX ,ASC_CIRC,KC_AMPR ,KC_ASTR ,ASC_COP  ,ASC_CCL  ,XXXXXXX ,
-                     XXXXXXX ,KC_EQL  ,KC_COLN ,ASC_TILD,ASC_SAR  ,ASC_DAR  ,XXXXXXX ,
-                              ASC_BKT ,KC_RBRC ,KC_RCBR ,ASC_DDS  ,ASC_SSL  ,XXXXXXX ,
+                     XXXXXXX ,ASC_CIRC,KC_AMPR ,KC_ASTR ,ASC_COP ,ASC_CCL ,XXXXXXX ,
+                     XXXXXXX ,KC_QUOT ,KC_COLN ,ASC_TILD,ASC_SAR ,ASC_DAR ,XXXXXXX ,
+                              ASC_BKT ,KC_RBRC ,KC_RCBR ,ASC_DDS ,ASC_SSL ,XXXXXXX ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         _______ ,XXXXXXX ,
         XXXXXXX ,XXXXXXX ,
@@ -252,7 +257,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_NAVI] = LAYOUT_5x7(
   // left hand
    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-   XXXXXXX ,XXXXXXX ,XXXXXXX ,C(KC_TAB),RCS(KC_TAB),KC_SPC ,XXXXXXX ,
+   XXXXXXX ,XXXXXXX ,KC_TAB  ,KC_PTAB ,KC_NTAB ,KC_SPC  ,XXXXXXX ,
    XXXXXXX ,KC_LGUI ,KC_LALT ,KC_LCTL ,KC_LSFT ,KC_ENT  ,XXXXXXX ,
    XXXXXXX ,U_UND   ,U_CUT   ,U_CPY   ,U_PST   ,U_RDO   ,
    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
@@ -262,7 +267,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    // right hand
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
                      XXXXXXX ,XXXXXXX , RCS(KC_LEFT)  ,C(KC_LEFT)   ,C(KC_RGHT)   ,RCS(KC_RGHT)   ,XXXXXXX ,
-                     XXXXXXX ,KC_TAB  ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,XXXXXXX ,
+                     XXXXXXX ,XXXXXXX ,KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT ,XXXXXXX ,
                               _______ ,KC_HOME ,KC_PGDN ,KC_PGUP ,KC_END  ,XXXXXXX ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         XXXXXXX ,XXXXXXX ,
