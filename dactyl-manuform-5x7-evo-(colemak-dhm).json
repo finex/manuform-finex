@@ -3,7 +3,7 @@
     "backcolor": "#ffffff",
     "name": "Dactyl-Manuform 5x7 Evo (Colemak DHm)",
     "author": "Leonardo (FiNeX) Finetti (https://www.leonardofinetti.it)",
-    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2022-02-13\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
+    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2022-11-03\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
     "background": {
       "name": "Bamboo",
       "style": "background-image: url('/bg/wood/bamboo.jpg');"
@@ -126,11 +126,13 @@
   [
     {
       "y": -0.9950000000000001,
-      "x": 14
+      "x": 14,
+      "f": 3
     },
     "L\nl\nØ\nø\n\n\n\n\n&\n\nCut",
     {
-      "x": 1
+      "x": 1,
+      "f": 3
     },
     "Y\ny\n\n\n\n\n\n\n/*\n\nPaste"
   ],
@@ -150,7 +152,8 @@
     },
     "",
     {
-      "a": 4
+      "a": 4,
+      "f": 3
     },
     "J\nj\n\n\n\n\n\n\n^\n\n↶"
   ],
@@ -172,7 +175,8 @@
     "\n⭾",
     {
       "x": 15.5,
-      "c": "#4f4f4f"
+      "c": "#4f4f4f",
+      "f": 3
     },
     ":\n;\n°\n¶\n\n\n\n\n*/\n:\n↷",
     {
@@ -356,9 +360,9 @@
     {
       "y": -0.3799999999999999,
       "x": 3.5,
-      "a": 2
+      "a": 3
     },
-    "\n\n0\n\nMEH",
+    "\n\n\n\nMEH",
     {
       "x": 10.5,
       "a": 4
@@ -369,9 +373,9 @@
     {
       "y": -0.875,
       "x": 2.5,
-      "a": 2
+      "a": 3
     },
-    "\n\n.\n\nHyper"
+    "\n\n\n\nHyper"
   ],
   [
     {
@@ -413,7 +417,7 @@
       "a": 0,
       "h": 1.5
     },
-    "\n⌫\n\n\n⌥ Nav\n\n\n⏎\n("
+    "\n⌫\n\n\n⌥ Nav\n\n\n0\n("
   ],
   [
     {
@@ -428,7 +432,8 @@
     {
       "r": 50,
       "y": -0.5,
-      "x": 2
+      "x": 2,
+      "t": "pink!important"
     },
     "\n⌦\n\n\n⌥ WSP\n\n\n\n:-)",
     {
