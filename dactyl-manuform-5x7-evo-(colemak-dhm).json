@@ -3,7 +3,7 @@
     "backcolor": "#ffffff",
     "name": "Dactyl-Manuform 5x7 Evo (Colemak DHm)",
     "author": "Leonardo (FiNeX) Finetti (https://www.leonardofinetti.it)",
-    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2022-11-03\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
+    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2022-11-03\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation/Mouse\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
     "background": {
       "name": "Bamboo",
       "style": "background-image: url('/bg/wood/bamboo.jpg');"
@@ -414,6 +414,7 @@
       "ry": 4.25,
       "y": 0.25,
       "x": 0.09999999999999964,
+      "t": "yellow!important",
       "a": 0,
       "h": 1.5
     },
@@ -423,7 +424,6 @@
     {
       "y": -0.75,
       "x": -1,
-      "t": "yellow!important",
       "h": 1.5
     },
     "\n⎋\n\n\n⌥ Mou\n\n\n,\n)"
