@@ -171,6 +171,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
 
+  // Pinkies
+  case KC_GU_O:
+    return TAPPING_TERM + 250;
+  case KC_GU_A:
+    return TAPPING_TERM + 100;
+
   // Ring fingers
   case KC_AL_I:
   case KC_AL_R:
@@ -178,16 +184,16 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
   case KC_AR_DO:
     return TAPPING_TERM + 200;
 
-  // Pinkies
-  case KC_GU_O:
-    return TAPPING_TERM + 200;
-  case KC_GU_A:
-    return TAPPING_TERM + 200;
-
   // Middle fingers
   case KC_CT_S:
   case KC_CT_E:
     return TAPPING_TERM - 30;
+
+  // Index fingers
+  case KC_LS_T:
+    return TAPPING_TERM - 40;
+  case KC_RS_N:
+    return TAPPING_TERM - 40;
 
   // Right thumbs
   case KC_SYSP:
@@ -392,6 +398,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______ ,_______),
 };
 
+
+
+
+// -----------------------------------------------------------------------------
+// Combos
+// -----------------------------------------------------------------------------
+enum combos {
+  BG_DEL,
+  JM_ENT,
+};
+
+const uint16_t PROGMEM bg_combo[] = {KC_B, KC_G, COMBO_END};
+const uint16_t PROGMEM jm_combo[] = {KC_J, KC_M, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  [BG_DEL] = COMBO(bg_combo, KC_DEL),
+  [JM_ENT] = COMBO(jm_combo, KC_ENT)
+};
+
+
+
+
+
+
 //extern bool g_suspend_state;
 //#define GET_TAP_KC(dual_role_key) dual_role_key & 0xFF
 //uint16_t last_keycode = KC_NO;
@@ -537,6 +567,8 @@ bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
   case KC_CT_E:
   case KC_AL_I:
   case KC_GU_O:
+  case KC_AR_X:
+  case KC_AR_DO:
     return true;
   default:
     return false;

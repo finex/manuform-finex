@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // - Recommended for heavy chording
 #define QMK_KEYS_PER_SCAN 4
 // - Custom tapping term
-#define TAPPING_TERM 240
+#define TAPPING_TERM 220
 #define TAPPING_TERM_PER_KEY
 
 
