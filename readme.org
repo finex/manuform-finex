@@ -1,11 +1,11 @@
 #+TITLE: Dactyl Manuform 5x7 FiNeX (Colemak DHm)
 #+AUTHOR: Leonardo (FiNeX) Finetti - https://www.leonardofinetti.it
-#+DATE: 03/10/2021
+#+DATE: 12/02/2023
 #+STARTUP: inlineimages
 #+STARTUP: nofold
 
 * Table of contents :TOC:
-- [[#customized-keymap-for-dactyl-manuform-5x7-by-leonardo-finex-finetti][Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti]]
+- [[#customized-keymap-for-dactyl-manuform-5x7-by-leonardo-finex-finetti---reduced-layout][Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti - REDUCED LAYOUT]]
 - [[#features][Features]]
 - [[#layout][Layout]]
 - [[#serial-connection][Serial connection]]
@@ -15,7 +15,7 @@
   - [[#left-half][Left half]]
 - [[#changelog][Changelog]]
 
-* Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti
+* Customized keymap for Dactyl Manuform 5x7 by Leonardo (FiNeX) Finetti - REDUCED LAYOUT
 This keymap use the default one with some changes to suit my needs. Mainly
 having most used symbols on a separated layer copying the common symbols from the
 number keys to the second row, adding other symbols and ~◌̀~ ~◌́~ dead keys for
@@ -50,8 +50,7 @@ setxkbmap -layout us -variant intl -option eurosign:e
 The default serial communication pin on the Dactyl Manuform is D0. I've soldered the wire to the D2 pin. Instead of resoldering again the wire I've simply changed the ~SOFT_SERIAL_PIN~ to ~D2~ on =config.h=.
 
 #+CAPTION: Redox FiNeX layout
-[[https://raw.githubusercontent.com/finex/manuform-finex/main/images/manuform-finex.png]]
-
+[[https://raw.githubusercontent.com/finex/manuform-finex/reduced/images/manuform-finex.png]]
 ** Color Legend
 - Green: Symbols
 - Yellow: Navigation
@@ -76,4 +75,6 @@ make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
 - 2020/10/03
   First public release.
 - 2022/07/12
-  Major update to the layout with the updates from Redox
+  Major update to the layout with the updates from Redox.
+- 2023/02/12
+  Reduced layout and updated readme.
