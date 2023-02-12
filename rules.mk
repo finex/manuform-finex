@@ -9,4 +9,6 @@ MOUSEKEY_ENABLE = yes
 
 COMBO_ENABLE = yes
 
+BOOTLOADER = qmk-dfu
+
 SRC += features/caps_word.c
