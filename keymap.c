@@ -220,18 +220,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_PSCR ,
    KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX ,
    KC_ESC  ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
-   /* KC_ESC  ,KC_A    ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC , */
    KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
    XXXXXXX ,XXXXXXX ,KC_HYPR ,KC_MEH  ,
                                   KC_MOES ,KC_NABS ,
-                                  /* KC_WSDE ,KC_ADPU , */
                                   KC_GUDE ,KC_ADPU ,
                                   KC_ENT  ,KC_PGDN ,
    // right hand
                      KC_INS  ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,TG_NUM  ,
                      XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL  ,
                      TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_MINS ,
-                     /* TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_O    ,KC_MINS , */
                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
                                        KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT,
         KC_SYSP ,KC_NUTA ,
@@ -301,7 +298,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    // right hand
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_MS_U ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-                     XXXXXXX ,KC_BTN3 ,KC_MS_L ,KC_MS_D ,KC_MS_R ,XXXXXXX ,XXXXXXX ,
+                     XXXXXXX ,XXXXXXX ,KC_MS_L ,KC_MS_D ,KC_MS_R ,XXXXXXX ,XXXXXXX ,
                               XXXXXXX ,KC_WH_L ,KC_WH_D ,KC_WH_U ,KC_WH_R ,XXXXXXX ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         KC_BTN1 ,KC_BTN2 ,

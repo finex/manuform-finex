@@ -1,6 +1,6 @@
 #+TITLE: Dactyl Manuform 5x7 FiNeX (Colemak DHm)
 #+AUTHOR: Leonardo (FiNeX) Finetti - https://www.leonardofinetti.it
-#+DATE: 27/10/2022
+#+DATE: 12/02/2023
 #+STARTUP: inlineimages
 #+STARTUP: nofold
 
@@ -23,10 +23,8 @@ accents.
 
 * Features
 - Layout: Colemak DHm.
-- Added redundant ~Space~, ~Esc~, ~Ctrl~, ~Del~, ~Backspace~ and ~Enter~ keys. I like to have this keys on both halves.
-- Added macro to print ~->~ and ~=>~ strings.
-- Added macro to print custom strings.
-- Added more arrows.
+- Added redundant ~Space~, ~Tab~ and ~Enter~ keys. I like to have this keys on both halves.
+- Added macro to print custom strings (~->~, ~=>~, ~../~, ~//~, ~:-)~ and ~:-(~.
 - Added ~(~ and ~)~ on Shifts keys (Space Cadet Shift).
 - Tapdance:
   - ~;~ × 2 = ~:~
@@ -34,8 +32,8 @@ accents.
   - ~]~ × 2 = ~}~
 - No media layer
 - "Print Screen" key.
-- ~Alt~, ~Ctrl~, ~Ctrl~ and ~Shift~ on home keys.
-- Added specific layout for "AwesomeWM" window manager.
+- ~Alt~, ~Ctrl~, ~Gui~ and ~Shift~ on home keys.
+- Added specific layout for "AwesomeWM" window manager (currently disabled).
 - Added clipboard and undo/redo macro.
 - Mouse layer.
 
@@ -82,3 +80,5 @@ make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
   Reworked thumb keys with a more suitable layout.
 - 2022/10/27
   Cleanup code, updated image and json, minor fixes
+- 2023/02/12
+  Updated image, json, readme and minor layout fixes and optimizations
