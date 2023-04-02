@@ -79,4 +79,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_TIME_TO_MAX    85
 
 
-#define COMBO_COUNT 2
+#define COMBO_COUNT 3
+
+
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD

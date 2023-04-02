@@ -3,7 +3,7 @@
     "backcolor": "#ffffff",
     "name": "Dactyl-Manuform 5x7 Evo (Colemak DHm)",
     "author": "Leonardo (FiNeX) Finetti (https://www.leonardofinetti.it)",
-    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2022-11-03\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation/Mouse\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
+    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2023-04-02\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation/Mouse\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
     "background": {
       "name": "Bamboo",
       "style": "background-image: url('/bg/wood/bamboo.jpg');"
@@ -52,11 +52,17 @@
       "x": 5.5
     },
     "%\n5\n\n€",
-    "\nPrnt",
+    {
+      "a": 7
+    },
+    "",
     {
       "x": 4.5
     },
-    "\nIns",
+    "",
+    {
+      "a": 4
+    },
     "<span class='cd'>&#9676;&#770;</span>\n6\n^\n¼"
   ],
   [
@@ -79,17 +85,15 @@
     ")\n0\n°\n’",
     {
       "c": "#333333",
-      "a": 7,
       "w": 1.5
     },
-    ""
+    "\n⎇ Num"
   ],
   [
     {
       "y": -0.3799999999999999,
       "x": 3.5,
-      "c": "#4f4f4f",
-      "a": 4
+      "c": "#4f4f4f"
     },
     "F\nf\n\n\n\n\nF8\n8\n#\n\nP⭾",
     {
@@ -234,11 +238,17 @@
       "f": 3
     },
     "G\ng\n\n\n\n\nPrint\n*\n<span>&#9676;&#769;</span>\n\n⏎",
-    "{\n[\n“\n«\n\n\n\n\n\n{",
+    {
+      "a": 7
+    },
+    "",
     {
       "x": 4.5
     },
-    "}\n]\n”\n»\n\n\n\n\n\n}",
+    "",
+    {
+      "a": 4
+    },
     "M\nm\n\nµ\n\n\n\n\n<span>&#9676;&#768;</span>"
   ],
   [
@@ -357,36 +367,32 @@
     {
       "y": -0.3799999999999999,
       "x": 3.5,
-      "a": 3
+      "a": 7
     },
-    "\n\n\n\nMEH",
+    "",
     {
-      "x": 10.5,
-      "a": 4
+      "x": 10.5
     },
-    "\n◀"
+    ""
   ],
   [
     {
       "y": -0.875,
-      "x": 2.5,
-      "a": 3
+      "x": 2.5
     },
-    "\n\n\n\nHyper"
+    ""
   ],
   [
     {
       "y": -0.9950000000000001,
-      "x": 16,
-      "a": 4
+      "x": 16
     },
-    "\n▼"
+    ""
   ],
   [
     {
       "y": -0.7549999999999999,
-      "x": 0.5,
-      "a": 7
+      "x": 0.5
     },
     "",
     {
@@ -398,11 +404,10 @@
     {
       "y": -0.9950000000000001,
       "x": 17,
-      "a": 4,
       "f": 3
     },
-    "\n▲",
-    "\n▶"
+    "",
+    ""
   ],
   [
     {
@@ -436,14 +441,14 @@
     {
       "t": "#000000"
     },
-    "\n↑\n\n\nAdjust\n\n\n\n:-("
+    "\n↑\n\n\nAdjust\n\n\n␣\n:-("
   ],
   [
     {
       "x": 2,
       "a": 4
     },
-    "\n⏎",
+    "\n⏎\n\n\n\n\n\n⏎",
     "\n↓"
   ],
   [

@@ -1,5 +1,5 @@
 #include QMK_KEYBOARD_H
-#include "features/caps_word.h"
+/* #include "features/caps_word.h" */
 
 // Layer names
 enum{
@@ -54,6 +54,9 @@ enum tap_dance_codes {
 #define KC_RS_N RSFT_T(KC_N)          // N / Right Shift
 #define KC_AR_X RALT_T(KC_X)          // X / Right Alt
 #define KC_AR_DO RALT_T(KC_DOT)       // . / Right Alt
+#define KC_HY_G HYPR_T(KC_G)          // G / Hypr
+#define KC_HY_M HYPR_T(KC_M)          // M / Hypr
+
 
 // - Thumbs keys/modifiers:
 #define KC_SYSP LT(_SYMB, KC_SPC)     // Space / _symbols
@@ -217,23 +220,46 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // -----------------------------------------------------------------------------
 [_COLEMAKDH] = LAYOUT_5x7(
    // left hand
-   KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,KC_PSCR ,
+   KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,XXXXXXX ,
    KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX ,
-   KC_ESC  ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,TD_LBRC ,
+   KC_ESC  ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_HY_G ,XXXXXXX ,
    KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
-   XXXXXXX ,XXXXXXX ,KC_HYPR ,KC_MEH  ,
+   XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
                                   KC_MOES ,KC_NABS ,
                                   KC_GUDE ,KC_ADPU ,
                                   KC_ENT  ,KC_PGDN ,
    // right hand
-                     KC_INS  ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,TG_NUM  ,
+                     XXXXXXX ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,TG_NUM  ,
                      XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL  ,
-                     TD_RBRC ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_MINS ,
+                     XXXXXXX ,KC_HY_M ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_MINS ,
                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
-                                       KC_LEFT ,KC_DOWN ,KC_UP   ,KC_RGHT,
+                                       XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         KC_SYSP ,KC_NUTA ,
         KC_ADHO ,KC_FUEN,
-        KC_END  ,KC_DEL),
+        KC_END  ,LT(_NAVI, KC_DEL)),
+
+
+/* [_COLEMAKDH] = LAYOUT_5x7( */
+/*    // left hand */
+/*    XXXXXXX,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,XXXXXXX , */
+/*    XXXXXXX  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX , */
+/*    XXXXXXX  ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,XXXXXXX , */
+/*    XXXXXXX ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    , */
+/*    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX , */
+/*                                   KC_MOES ,KC_NABS , */
+/*                                   KC_GUDE ,KC_ADPU , */
+/*                                   XXXXXXX  ,KC_PGDN , */
+/*    // right hand */
+/*                      XXXXXXX ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,XXXXXXX  , */
+/*                      XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,XXXXXXX  , */
+/*                      XXXXXXX ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,XXXXXXX , */
+/*                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,XXXXXXX , */
+/*                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX , */
+/*         KC_SYSP ,KC_NUTA , */
+/*         XXXXXXX ,KC_FUEN, */
+/*         XXXXXXX  ,LT(_NAVI, KC_DEL)), */
+
+
 
 // -----------------------------------------------------------------------------
 // Symbols
@@ -297,8 +323,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   XXXXXXX ,XXXXXXX ,
    // right hand
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
-                     XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_MS_U ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-                     XXXXXXX ,XXXXXXX ,KC_MS_L ,KC_MS_D ,KC_MS_R ,XXXXXXX ,XXXXXXX ,
+                     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+                     XXXXXXX ,XXXXXXX ,KC_MS_L ,KC_MS_D ,KC_MS_U ,KC_MS_R ,XXXXXXX ,
                               XXXXXXX ,KC_WH_L ,KC_WH_D ,KC_WH_U ,KC_WH_R ,XXXXXXX ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         KC_BTN1 ,KC_BTN2 ,
@@ -321,7 +347,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    // right hand
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-                     XXXXXXX ,XXXXXXX ,KC_RSFT ,KC_RCTL ,KC_LALT ,KC_RGUI ,XXXXXXX ,
+                     XXXXXXX ,KC_HYPR ,KC_RSFT ,KC_RCTL ,KC_LALT ,KC_RGUI ,XXXXXXX ,
                               XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_RALT ,XXXXXXX ,XXXXXXX ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         XXXXXXX ,_______ ,
@@ -344,7 +370,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    // right hand
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,QK_BOOT ,XXXXXXX ,
-                     XXXXXXX ,XXXXXXX ,KC_RSFT ,KC_RCTL ,KC_LALT ,KC_RGUI ,XXXXXXX ,
+                     XXXXXXX ,KC_HYPR ,KC_RSFT ,KC_RCTL ,KC_LALT ,KC_RGUI ,XXXXXXX ,
                               XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_RALT ,XXXXXXX ,XXXXXXX ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         XXXXXXX ,XXXXXXX ,
@@ -409,18 +435,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 enum combos {
   BG_DEL,
   JM_ENT,
+  DH_ESC
 };
 
 const uint16_t PROGMEM bg_combo[] = {KC_B, KC_G, COMBO_END};
 const uint16_t PROGMEM jm_combo[] = {KC_J, KC_M, COMBO_END};
+const uint16_t PROGMEM dh_combo[] = {KC_D, KC_H, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [BG_DEL] = COMBO(bg_combo, KC_DEL),
-  [JM_ENT] = COMBO(jm_combo, KC_ENT)
+  [JM_ENT] = COMBO(jm_combo, KC_ENT),
+  [DH_ESC] = COMBO(dh_combo, KC_ESC)
 };
-
-
-
 
 
 

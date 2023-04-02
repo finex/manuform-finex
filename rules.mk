@@ -11,4 +11,5 @@ COMBO_ENABLE = yes
 
 BOOTLOADER = qmk-dfu
 
-SRC += features/caps_word.c
+# SRC += features/caps_word.c
+CAPS_WORD_ENABLE = yes
