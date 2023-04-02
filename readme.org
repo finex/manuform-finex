@@ -47,7 +47,7 @@ setxkbmap -layout us -variant intl -option eurosign:e
 The default serial communication pin on the Dactyl Manuform is D0. I've soldered the wire to the D2 pin. Instead of resoldering again the wire I've simply changed the ~SOFT_SERIAL_PIN~ to ~D2~ on =config.h=.
 
 #+CAPTION: Redox FiNeX layout
-[[https://raw.githubusercontent.com/finex/manuform-finex/6x4/images/manuform-finex.png]]
+[[https://raw.githubusercontent.com/finex/manuform-finex/5x4/images/manuform-finex.png]]
 ** Color Legend
 - Green: Symbols
 - Yellow: Navigation
