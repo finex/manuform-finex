@@ -1,6 +1,6 @@
 #+TITLE: Dactyl Manuform 5x7 FiNeX (Colemak DHm)
 #+AUTHOR: Leonardo (FiNeX) Finetti - https://www.leonardofinetti.it
-#+DATE: 12/02/2023
+#+DATE: 02/04/2023
 #+STARTUP: inlineimages
 #+STARTUP: nofold
 
@@ -28,11 +28,9 @@ accents.
 - Added ~(~ and ~)~ on Shifts keys (Space Cadet Shift).
 - Tapdance:
   - ~;~ × 2 = ~:~
-  - ~[~ × 2 = ~{~
-  - ~]~ × 2 = ~}~
 - No media layer
 - "Print Screen" key.
-- ~Alt~, ~Ctrl~, ~Gui~ and ~Shift~ on home keys.
+- ~Alt~, ~Ctrl~, ~Gui~, ~Shift~ and ~Hypr~ on home keys. ~AltGr~ on bottom home row.
 - Added specific layout for "AwesomeWM" window manager (currently disabled).
 - Added clipboard and undo/redo macro.
 - Mouse layer.
@@ -49,8 +47,7 @@ setxkbmap -layout us -variant intl -option eurosign:e
 The default serial communication pin on the Dactyl Manuform is D0. I've soldered the wire to the D2 pin. Instead of resoldering again the wire I've simply changed the ~SOFT_SERIAL_PIN~ to ~D2~ on =config.h=.
 
 #+CAPTION: Redox FiNeX layout
-[[https://raw.githubusercontent.com/finex/manuform-finex/main/images/manuform-finex.png]]
-
+[[https://raw.githubusercontent.com/finex/manuform-finex/6x4/images/manuform-finex.png]]
 ** Color Legend
 - Green: Symbols
 - Yellow: Navigation
@@ -82,3 +79,5 @@ make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
   Cleanup code, updated image and json, minor fixes
 - 2023/02/12
   Updated image, json, readme and minor layout fixes and optimizations
+- 2023/04/02
+  Updated image, json, readme after minor optimizations: removed old keys from image/json, added hyper key, added experimental ESC tap dance (~h~ + ~d~). Removed old Caps Word custom code and used new ~CAPS_WORD_ENABLE~ QMK feature.
