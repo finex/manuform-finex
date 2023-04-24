@@ -31,13 +31,6 @@ enum custom_keycodes {
   ASC_SSL
 };
 
-// Tap dance codes
-enum tap_dance_codes {
-  DANCE_1, // Tab (single), Ctrl (hold), Mouse layer (double hold)
-  DANCE_2, // Semicolon (single), Colon (double)
-  DANCE_3, // Left Bracket (single), Left Brace (double)
-  DANCE_4  // Right Bracket (single), Left Brace (double)
-};
 
 // Shortcuts to make keymap more readable
 // - Adjustment Layer:
@@ -57,7 +50,6 @@ enum tap_dance_codes {
 #define KC_HY_G HYPR_T(KC_G)          // G / Hypr
 #define KC_HY_M HYPR_T(KC_M)          // M / Hypr
 
-
 // - Thumbs keys/modifiers:
 #define KC_SYSP LT(_SYMB, KC_SPC)     // Space / _symbols
 #define KC_FUEN LT(_FUNC, KC_ENT)     // Enter / _functions
@@ -71,12 +63,6 @@ enum tap_dance_codes {
 #define TG_NUM TG(_NUMB)
 /* #define TG_NAV TG(_NAVI) */
 
-// - Tap dance keys:
-/* #define TD_DCMO TD(DANCE_1) */
-#define TD_DGMO TD(DANCE_1)
-#define TD_SCLN TD(DANCE_2)
-#define TD_LBRC TD(DANCE_3)
-#define TD_RBRC TD(DANCE_4)
 // - Awesome WM macros:
 #define KC_AW1 LGUI(KC_1)
 #define KC_AW2 LGUI(KC_2)
@@ -101,19 +87,12 @@ enum tap_dance_codes {
 #define KC_PTAB RCS(KC_TAB)
 #define KC_NTAB C(KC_TAB)
 
-
 #ifdef CONSOLE_ENABLE
 #include "print.h"
 #endif
 
-
-
 // Send custom strings or change default base layer
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-
-  // Process caps_word
-  if (!process_caps_word(keycode, record)) { return false; }
-
   if (record->event.pressed) {
     switch(keycode) {
       case ASC_SAR:
@@ -177,8 +156,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
   // Pinkies
   case KC_GU_O:
-    /* return TAPPING_TERM + 250; */
-    return TAPPING_TERM + 0;
+    return TAPPING_TERM + 200;
   case KC_GU_A:
     return TAPPING_TERM + 100;
 
@@ -196,13 +174,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
   // Index fingers
   case KC_LS_T:
-    return TAPPING_TERM - 40;
   case KC_RS_N:
     return TAPPING_TERM - 40;
 
   // Right thumbs
   case KC_SYSP:
-    return TAPPING_TERM - 50;
+    return TAPPING_TERM - 80;
   case KC_NUTA:
   case KC_FUEN:
     return TAPPING_TERM - 20;
@@ -223,42 +200,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    KC_ESC  ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,XXXXXXX ,
    KC_TAB  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX ,
    KC_ESC  ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_HY_G ,XXXXXXX ,
-   KC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
+   SC_LSPO ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    ,
    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
                                   KC_MOES ,KC_NABS ,
                                   KC_GUDE ,KC_ADPU ,
                                   KC_ENT  ,KC_PGDN ,
    // right hand
                      XXXXXXX ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,TG_NUM  ,
-                     XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,KC_EQL  ,
+                     XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,KC_SCLN ,KC_EQL  ,
                      XXXXXXX ,KC_HY_M ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,KC_MINS ,
-                              KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,KC_RSPC ,
+                              KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,SC_RSPC ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         KC_SYSP ,KC_NUTA ,
         KC_ADHO ,KC_FUEN,
         KC_END  ,LT(_NAVI, KC_DEL)),
-
-
-/* [_COLEMAKDH] = LAYOUT_5x7( */
-/*    // left hand */
-/*    XXXXXXX,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,XXXXXXX , */
-/*    XXXXXXX  ,KC_Q    ,KC_W    ,KC_F    ,KC_P    ,KC_B    ,XXXXXXX , */
-/*    XXXXXXX  ,KC_GU_A ,KC_AL_R ,KC_CT_S ,KC_LS_T ,KC_G    ,XXXXXXX , */
-/*    XXXXXXX ,KC_Z    ,KC_AR_X ,KC_C    ,KC_D    ,KC_V    , */
-/*    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX , */
-/*                                   KC_MOES ,KC_NABS , */
-/*                                   KC_GUDE ,KC_ADPU , */
-/*                                   XXXXXXX  ,KC_PGDN , */
-/*    // right hand */
-/*                      XXXXXXX ,KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,XXXXXXX  , */
-/*                      XXXXXXX ,KC_J    ,KC_L    ,KC_U    ,KC_Y    ,TD_SCLN ,XXXXXXX  , */
-/*                      XXXXXXX ,KC_M    ,KC_RS_N ,KC_CT_E ,KC_AL_I ,KC_GU_O ,XXXXXXX , */
-/*                               KC_K    ,KC_H    ,KC_COMM ,KC_AR_DO,KC_SLSH ,XXXXXXX , */
-/*                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX , */
-/*         KC_SYSP ,KC_NUTA , */
-/*         XXXXXXX ,KC_FUEN, */
-/*         XXXXXXX  ,LT(_NAVI, KC_DEL)), */
-
 
 
 // -----------------------------------------------------------------------------
@@ -433,156 +388,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // Combos
 // -----------------------------------------------------------------------------
 enum combos {
-  BG_DEL,
-  JM_ENT,
+  /* BG_DEL, */
+  /* JM_ENT, */
   DH_ESC
 };
 
-const uint16_t PROGMEM bg_combo[] = {KC_B, KC_G, COMBO_END};
-const uint16_t PROGMEM jm_combo[] = {KC_J, KC_M, COMBO_END};
+/* const uint16_t PROGMEM bg_combo[] = {KC_B, KC_G, COMBO_END}; */
+/* const uint16_t PROGMEM jm_combo[] = {KC_J, KC_M, COMBO_END}; */
 const uint16_t PROGMEM dh_combo[] = {KC_D, KC_H, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [BG_DEL] = COMBO(bg_combo, KC_DEL),
-  [JM_ENT] = COMBO(jm_combo, KC_ENT),
+  /* [BG_DEL] = COMBO(bg_combo, KC_DEL), */
+  /* [JM_ENT] = COMBO(jm_combo, KC_ENT), */
   [DH_ESC] = COMBO(dh_combo, KC_ESC)
 };
 
-
-
-//extern bool g_suspend_state;
-//#define GET_TAP_KC(dual_role_key) dual_role_key & 0xFF
-//uint16_t last_keycode = KC_NO;
-//uint8_t last_modifier = 0;
-
-// Define "tap" structure
-typedef struct {
-    bool is_press_action;
-    uint8_t step;
-} tap;
-
-// Tap combinations
-enum {
-    SINGLE_TAP = 1,
-    SINGLE_HOLD,
-    DOUBLE_TAP,
-    DOUBLE_HOLD,
-    DOUBLE_SINGLE_TAP,
-    MORE_TAPS
-};
-
-static tap dance_state = {
-    .is_press_action = true,
-    .step = 0
-};
-
-// Dance 1: Del / Gui / _Mouse
-void on_dance_1(qk_tap_dance_state_t *state, void *user_data) {
-  if(state->count == 3) {
-    tap_code16(KC_DEL);
-    tap_code16(KC_DEL);
-    tap_code16(KC_DEL);
-  }
-  if(state->count > 3) {
-    tap_code16(KC_DEL);
-  }
-}
-
-uint8_t dance_1_dance_step(qk_tap_dance_state_t *state) {
-  if (state->count == 1) {
-    if (state->interrupted || !state->pressed) return SINGLE_TAP;
-    else return SINGLE_HOLD;
-  } else if (state->count == 2) {
-    if (state->interrupted) return DOUBLE_SINGLE_TAP;
-    else if (state->pressed) return DOUBLE_HOLD;
-    else return DOUBLE_TAP;
-  }
-  return MORE_TAPS;
-}
-void dance_1_finished(qk_tap_dance_state_t *state, void *user_data) {
-  dance_state.step = dance_1_dance_step(state);
-  switch (dance_state.step) {
-  case SINGLE_TAP: register_code16(KC_DEL); break;
-  case SINGLE_HOLD: register_mods(MOD_BIT(KC_LGUI)); break;
-  case DOUBLE_TAP: register_code16(KC_DEL); register_code16(KC_DEL); break;
-  case DOUBLE_HOLD: layer_on(_MOUS); break;
-  case DOUBLE_SINGLE_TAP: tap_code16(KC_DEL); register_code16(KC_DEL);
-  }
-}
-
-void dance_1_reset(qk_tap_dance_state_t *state, void *user_data) {
-  wait_ms(10);
-  switch (dance_state.step) {
-  case SINGLE_TAP: unregister_code16(KC_DEL); break;
-  case SINGLE_HOLD: unregister_mods(MOD_BIT(KC_LGUI)); break;
-  case DOUBLE_TAP: unregister_code16(KC_DEL); break;
-  case DOUBLE_HOLD: layer_off(_MOUS); break;
-  case DOUBLE_SINGLE_TAP: unregister_code16(KC_DEL); break;
-  }
-  dance_state.step = 0;
-}
-
-// Dance 2: Semicolon to Colon
-void dance_2_finished (qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1) {
-    register_code (KC_SCLN);
-  } else {
-    register_code (KC_RSFT);
-    register_code (KC_SCLN);
-  }
-}
-void dance_2_reset (qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1) {
-    unregister_code (KC_SCLN);
-  } else {
-    unregister_code (KC_RSFT);
-    unregister_code (KC_SCLN);
-  }
-}
-
-// Dance 3: Square braket to curly bracket (left)
-void dance_3_finished (qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1) {
-    register_code (KC_LBRC);
-  } else {
-    register_code (KC_RSFT);
-    register_code (KC_LBRC);
-  }
-}
-void dance_3_reset (qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1) {
-    unregister_code (KC_LBRC);
-  } else {
-    unregister_code (KC_RSFT);
-    unregister_code (KC_LBRC);
-  }
-}
-
-// Dance 4: Square braket to curly bracket (right)
-void dance_4_finished (qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1) {
-    register_code (KC_RBRC);
-  } else {
-    register_code (KC_RSFT);
-    register_code (KC_RBRC);
-  }
-}
-void dance_4_reset (qk_tap_dance_state_t *state, void *user_data) {
-  if (state->count == 1) {
-    unregister_code (KC_RBRC);
-  } else {
-    unregister_code (KC_RSFT);
-    unregister_code (KC_RBRC);
-  }
-}
-
-// Match tap dance actions with the corresponding index
-qk_tap_dance_action_t tap_dance_actions[] = {
-  [DANCE_1] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_1, dance_1_finished, dance_1_reset),
-  [DANCE_2] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_2_finished, dance_2_reset),
-  [DANCE_3] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_3_finished, dance_3_reset),
-  [DANCE_4] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, dance_4_finished, dance_4_reset)
-};
 
 // Enable tapping_force_hold only for home row mods
 bool get_tapping_force_hold(uint16_t keycode, keyrecord_t *record) {
