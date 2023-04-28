@@ -81,3 +81,5 @@ make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
   Updated image, json, readme after minor optimizations: removed old keys from image/json, added hyper key, added experimental ESC tap dance (~h~ + ~d~). Removed old Caps Word custom code and used new ~CAPS_WORD_ENABLE~ QMK feature.
 - 2023/04/24
   Removed tap dance because I don't use it anymore, removed a couple of combos because i don't use them. Fine tuning tap term on "o" key.
+- 2023/04/28
+  Minor update on mouse layer (from home row to inverted T).
