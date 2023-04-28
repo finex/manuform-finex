@@ -334,7 +334,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 
 // -----------------------------------------------------------------------------
-// Workspace (AwesomeWM navigation)
+// Workspace (AwesomeWM navigation) - CURRENTLY DISABLED
 // -----------------------------------------------------------------------------
 [_WSPC] = LAYOUT_5x7(
   // left hand

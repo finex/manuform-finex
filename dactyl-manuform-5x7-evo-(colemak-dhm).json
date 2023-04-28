@@ -3,7 +3,7 @@
     "backcolor": "#ffffff",
     "name": "Dactyl-Manuform 5x7 Evo (Colemak DHm)",
     "author": "Leonardo (FiNeX) Finetti (https://www.leonardofinetti.it)",
-    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2023-04-02\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Tap dance  | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation/Mouse\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
+    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2023-04-28\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Mouse      | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation/Mouse\n- Cyan: Numbers\n- Orange: Functions\n- Red: Tap dance",
     "background": {
       "name": "Bamboo",
       "style": "background-image: url('/bg/wood/bamboo.jpg');"
@@ -11,7 +11,7 @@
     "switchMount": "cherry",
     "switchBrand": "cherry",
     "switchType": "MX3A-L1Nx",
-    "css": "* {\n    font-family: 'Iosevka SS04', sans-serif;\n} \n.keylabel{\n    font-size: 10px;\n}\n.keylabel {\n    color: white!important;\n}\n.keylabel0, \n.keylabel6{\n    font-weight: bold;\n}\n.keylabel1{\n    color: lime!important;\n}\n.keylabel3{\n    color: orange!important;\n    font-size: 8px;\n}\n.keylabel4{\n    color: red!important;\n    font-size: 8px;\n}\n.keylabel5{\n    color: cyan!important;\n    font-size: 8px;\n}\n.keylabel7{\n    color: yellow!important;\n    font-size: 8px;\n}\n.keylabel9{\n    margin-top:0.5px;\n    margin-left:-3px;\n\n}\n.keylabel9 {\n    font-size:6.5px!important;\n    color: #acacac!important;\n    font-weight: bold;\n    text-transform: uppercase;\n}\n.keylabel11{\n    margin-top:0.5px;\n    right:-1px;\n}\n.keylabel11{\n    font-size:6.5px!important;\n    color:#777!important;\n}\n"
+    "css": "* {\n    font-family: 'Iosevka SS04', sans-serif;\n} \n.keylabel{\n    font-size: 10px;\n}\n.keylabel {\n    color: white!important;\n}\n.keylabel0, \n.keylabel6{\n    font-weight: bold;\n}\n.keylabel1{\n    color: lime!important;\n}\n.keylabel3{\n    color: orange!important;\n    font-size: 8px;\n}\n.keylabel4{\n    color: hotpink!important;\n    font-size: 8px;\n}\n.keylabel5{\n    color: cyan!important;\n    font-size: 8px;\n}\n.keylabel7{\n    color: yellow!important;\n    font-size: 8px;\n}\n.keylabel9{\n    margin-top:0.5px;\n    margin-left:-3px;\n\n}\n.keylabel9 {\n    font-size:6.5px!important;\n    color: #acacac!important;\n    font-weight: bold;\n    text-transform: uppercase;\n}\n.keylabel11{\n    margin-top:0.5px;\n    right:-1px;\n}\n.keylabel11{\n    font-size:6.5px!important;\n    color:#777!important;\n}\n"
   },
   [
     {
@@ -112,7 +112,7 @@
         1
       ]
     },
-    "U\nu\n\n\n\n\n\n▲\n*\n\nCopy"
+    "U\nu\n\n\n\n\n\n\n*\n▲\nCopy"
   ],
   [
     {
@@ -180,11 +180,13 @@
     {
       "x": 15.5,
       "c": "#4f4f4f",
+      "a": 0,
       "f": 3
     },
-    ":\n;\n°\n¶\n\n\n\n\n*/\n:\n↷",
+    ":\n;\n°\n¶\n\nRESET\n\n\n*/\n\n↷",
     {
       "c": "#333333",
+      "a": 4,
       "w": 1.5
     },
     "+\n=\n÷\n×"
@@ -201,14 +203,14 @@
       "x": 10.5,
       "f": 3
     },
-    "E\ne\n\n€\nCtrl\n\n\n▼\n~\n\n▼"
+    "E\ne\n\n€\nCtrl\n\n\n\n~\n▼\n▼"
   ],
   [
     {
       "y": -0.875,
       "x": 2.5
     },
-    "R\nr\n\n®\nAlt\n\nF4\n4\n-",
+    "R\nr\n™\n®\nAlt\n\nF4\n4\n-",
     {
       "x": 1,
       "sm": "cherry",
@@ -223,12 +225,12 @@
       "f": 3,
       "n": true
     },
-    "N\nn\n\n\nShift\n\n\n◀\n:\n\n◀",
+    "N\nn\n\n\nShift\n\n\n\n:\n◀\n◀",
     {
       "x": 1,
       "f": 3
     },
-    "I\ni\n\n\nAlt\n\n\n▶\n->\n\n▲"
+    "I\ni\n\n\nAlt\n\n\n\n->\n▶\n▲"
   ],
   [
     {
@@ -290,7 +292,7 @@
       "x": 10.5,
       "f": 3
     },
-    "<\n,\n\n\n\n\n\n⇣\n}\n\n↓"
+    "<\n,\n\n\n\n\n\n\n}\n⇣\n↓"
   ],
   [
     {
@@ -313,13 +315,13 @@
       "x": 14,
       "f": 3
     },
-    "h\nh\n\n\n\n\n\n⇠\n]\n\n⇤",
+    "h\nh\n\n\n\n\n\n\n]\n⇠\n⇤",
     {
       "x": 1,
       "a": 0,
       "f": 3
     },
-    ">\n.\n\n\nAltGr\n\n\n⇡\n../\n\n↑"
+    ">\n.\n\n\nAltGr\n\n\n\n../\n⇡\n↑"
   ],
   [
     {
@@ -355,7 +357,7 @@
       "x": 17,
       "f": 3
     },
-    "?\n/\n\n¿\n\n\n\n⇢\n//\n\n⇥",
+    "?\n/\n\n¿\n\n\n\n\n//\n⇢\n⇥",
     {
       "c": "#333333",
       "a": 0,
@@ -426,6 +428,7 @@
     {
       "y": -0.75,
       "x": -1,
+      "t": "hotpink!important",
       "h": 1.5
     },
     "\n⎋\n\n\n⌥ Mou\n\n\n,\n)"
@@ -435,13 +438,15 @@
       "r": 50,
       "y": -0.5,
       "x": 2,
-      "t": "pink!important"
+      "t": "pink!important",
+      "a": 4
     },
-    "\n⌦\n\n\n⌥ WSP\n\n\n⌫\n:-)",
+    "\n⌦\n\n\n\n\n\n⌫\n:-)",
     {
-      "t": "#000000"
+      "t": "#000000",
+      "a": 0
     },
-    "\n↑\n\n\nAdjust\n\n\n␣\n:-("
+    "\n↑\n\n\n⌥ Adjust\n\n\n␣\n:-("
   ],
   [
     {
@@ -459,11 +464,11 @@
       "x": -4,
       "a": 0
     },
-    "\n⇤\n\n\nAdjust",
+    "\n⇤\n\n\n⌥ Adjust",
     {
       "t": "orange!important"
     },
-    "\n⏎\n\n\n⌥ Fun\n\n\n<small><em>M3</em></small>"
+    "\n⏎\n\n\n⌥ Fun\n\n\n\n\nM3"
   ],
   [
     {
@@ -483,7 +488,7 @@
       "a": 0,
       "h": 1.5
     },
-    "\n␣\n\n\n⌥ Sym\n\n\n<small><em>M1</em></small>"
+    "\n␣\n\n\n⌥ Sym\n\n\n\n\nM1"
   ],
   [
     {
@@ -491,6 +496,6 @@
       "t": "cyan!important",
       "h": 1.5
     },
-    "\n⭾\n\n\n⌥ Num\n\n\n<small><em>M2</em></small>"
+    "\n⭾\n\n\n⌥ Num\n\n\n\n\nM2"
   ]
 ]
