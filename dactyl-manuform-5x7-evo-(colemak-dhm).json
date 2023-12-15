@@ -3,7 +3,7 @@
     "backcolor": "#ffffff",
     "name": "Dactyl-Manuform 5x7 Evo (Colemak DHm)",
     "author": "Leonardo (FiNeX) Finetti (https://www.leonardofinetti.it)",
-    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2023-04-28\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Mouse      | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation\n- Cyan: Numbers\n- Orange: Functions\n- Pink: Mouse",
+    "notes": "# Ergonomic Redox Keyboard Layout #\nRevision date: 2023-12-15\nLayout: English (US, intl, with dead keys)\n\n\n## Keys Legend: ##\nThe following scheme describe the meaning of the keys symbols positions.\n\n|-------------+------------+---------------|\n| Shifted key | Symbols    | Shifted AltGr |\n|-------------+------------+---------------|\n| Functions   | Mouse      | Numbers       |\n|-------------+------------+---------------|\n| Single Tap  | Navigation | AltGr         |\n|-------------+------------+---------------|\n| Modifier    |            | Adjust        |\n|-------------+------------+---------------|\n\n\n## Color Legend: ##\n- Green: Symbols\n- Yellow: Navigation\n- Cyan: Numbers\n- Orange: Functions\n- Pink: Mouse",
     "background": {
       "name": "Bamboo",
       "style": "background-image: url('/bg/wood/bamboo.jpg');"
@@ -95,7 +95,7 @@
       "x": 3.5,
       "c": "#4f4f4f"
     },
-    "F\nf\n\n\n\n\nF8\n8\n#\n\nP⭾",
+    "F\nf\n\n\n\n\nF8\n8\n#\n8\nP⭾",
     {
       "x": 10.5,
       "fa": [
@@ -112,7 +112,7 @@
         1
       ]
     },
-    "U\nu\n\n\n\n\n\n\n*\n▲\nCopy"
+    "U\nu\n\n\n\n\n\n\n*\n\nCopy"
   ],
   [
     {
@@ -120,12 +120,12 @@
       "x": 2.5,
       "f": 3
     },
-    "W\nw\n\n\n\n\nF7\n7\n@\n\n⭾",
+    "W\nw\n\n\n\n\nF7\n7\n@\n7\n⭾",
     {
       "x": 1,
       "f": 3
     },
-    "P\np\n\n\n\n\nF9\n9\n$\n\nN⭾"
+    "P\np\n\n\n\n\nF9\n9\n$\n9\nN⭾"
   ],
   [
     {
@@ -146,7 +146,7 @@
       "x": 5.5,
       "f": 3
     },
-    "B\nb\n\n\n\n\nCaps<br>Lock\n+\n%\n\n␣",
+    "B\nb\n\n\n\n\nLck\n+\n%\n,\n␣",
     {
       "a": 7
     },
@@ -198,7 +198,7 @@
       "c": "#4f4f4f",
       "a": 0
     },
-    "S\ns\n\n\nCtrl\n\nF5\n5\n'",
+    "S\ns\n\n\nCtrl\n\nF5\n5\n'\n5",
     {
       "x": 10.5,
       "f": 3
@@ -210,13 +210,13 @@
       "y": -0.875,
       "x": 2.5
     },
-    "R\nr\n™\n®\nAlt\n\nF4\n4\n-",
+    "R\nr\n™\n®\nAlt\n\nF4\n4\n-\n4",
     {
       "x": 1,
       "sm": "cherry",
       "n": true
     },
-    "T\nt\n\n\nShift\n\nF6\n6\n\""
+    "T\nt\n\n\nShift\n\nF6\n6\n\"\n6"
   ],
   [
     {
@@ -230,7 +230,7 @@
       "x": 1,
       "f": 3
     },
-    "I\ni\n\n\nAlt\n\n\n\n->\n▶\n▲"
+    "I\ni\n\n\nAlt\n\n\n\n->\n▲\n▲"
   ],
   [
     {
@@ -238,7 +238,7 @@
       "x": 5.5,
       "f": 3
     },
-    "G\ng\n\n\nHYPER\n\nPrint\n*\n<span>&#9676;&#769;</span>\n\n⏎",
+    "G\ng\n\n\nHYPER\n\nPrt\n*\n<span>&#9676;&#769;</span>\n0\n⏎",
     {
       "a": 7
     },
@@ -272,7 +272,7 @@
       "x": 17,
       "f": 3
     },
-    "O\no\n\n\nGui\n\n\n\n=>\n\n▶",
+    "O\no\n\n\nGui\n\n\n\n=>\n▶\n▶",
     {
       "c": "#333333",
       "a": 4,
@@ -287,7 +287,7 @@
       "c": "#4f4f4f",
       "f": 3
     },
-    "C\nc\n\n©\n\n\nF2\n2\n{\n\nCopy",
+    "C\nc\n\n©\n\n\nF2\n2\n{\n2\nCopy",
     {
       "x": 10.5,
       "f": 3
@@ -301,13 +301,13 @@
       "a": 0,
       "f": 3
     },
-    "X\nx\n\n\nAltGr\n\nF1\n1\n_\n\nCut",
+    "X\nx\n\n\nAltGr\n\nF1\n1\n_\n1\nCut",
     {
       "x": 1,
       "a": 4,
       "f": 3
     },
-    "D\nd\n\n\n\n\nF3\n3\n[\n\nPaste"
+    "D\nd\n\n\n\n\nF3\n3\n[\n3\nPaste"
   ],
   [
     {
@@ -330,7 +330,7 @@
       "a": 4,
       "f": 3
     },
-    "V\nv\n\n\n\n\nIns\n=\n=\n\n↷",
+    "V\nv\n\n\n\n\nIns\n=\n=\n.\n↷",
     {
       "x": 6.5
     },

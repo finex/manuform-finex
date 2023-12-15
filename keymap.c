@@ -156,9 +156,9 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
 
   // Pinkies
   case KC_GU_O:
-    return TAPPING_TERM + 200;
+    return TAPPING_TERM + 300;
   case KC_GU_A:
-    return TAPPING_TERM + 100;
+    return TAPPING_TERM + 150;
 
   // Ring fingers
   case KC_AL_I:
@@ -269,17 +269,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_MOUS] = LAYOUT_5x7(
   // left hand
    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-   XXXXXXX ,C(KC_Q) ,C(KC_W) ,C(KC_F) ,C(KC_P) ,C(KC_B) ,XXXXXXX ,
-   XXXXXXX ,C(KC_A) ,C(KC_R) ,C(KC_S) ,C(KC_T) ,C(KC_G) ,XXXXXXX ,
-   XXXXXXX ,U_UND   ,U_CUT   ,U_CPY   ,U_PST   ,U_RDO   ,
+   XXXXXXX ,XXXXXXX ,KC_7    ,KC_8    ,KC_9    ,KC_COMM ,XXXXXXX ,
+   XXXXXXX ,XXXXXXX ,KC_4    ,KC_5    ,KC_6    ,KC_0    ,XXXXXXX ,
+   XXXXXXX ,XXXXXXX ,KC_1    ,KC_2    ,KC_3    ,KC_DOT  ,
    XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
                                   XXXXXXX ,XXXXXXX ,
                                   _______ ,XXXXXXX ,
                                   XXXXXXX ,XXXXXXX ,
    // right hand
                      XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,_______ ,
-                     XXXXXXX ,XXXXXXX ,XXXXXXX ,KC_MS_U ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
-                     XXXXXXX ,XXXXXXX ,KC_MS_L ,KC_MS_D ,KC_MS_R ,XXXXXXX ,XXXXXXX ,
+                     XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
+                     XXXXXXX ,XXXXXXX ,KC_MS_L ,KC_MS_D ,KC_MS_U ,KC_MS_R ,XXXXXXX ,
                               XXXXXXX ,KC_WH_L ,KC_WH_D ,KC_WH_U ,KC_WH_R ,XXXXXXX ,
                                        XXXXXXX ,XXXXXXX ,XXXXXXX ,XXXXXXX ,
         KC_BTN1 ,KC_BTN2 ,

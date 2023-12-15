@@ -85,3 +85,5 @@ make handwired/dactyl_manuform/5x7:manuform-finex:dfu-split-left
   Removed tap dance because I don't use it anymore, removed a couple of combos because i don't use them. Fine tuning tap term on "o" key.
 - 2023/04/28
   Minor update on mouse layer (from home row to inverted T).
+- 2023/12/15
+  Updated mouse layer: reverted movement to home row and added numpad on mouse layer (same hand activation)
